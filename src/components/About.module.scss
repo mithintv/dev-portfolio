@@ -1,0 +1,110 @@
+@import '../sass/variables.scss';
+
+.wrapper {
+  background-color: $background-color-l2;
+  margin: 2rem 0;
+
+  .about {
+    background-color: $background-color-l2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .header {
+      display: flex;
+      justify-content: center;
+
+      .title {
+        display: inline-block;
+        margin: 2rem 0 0.5rem;
+        padding: 0 1rem 0.25rem;
+        border-bottom: 3px solid $heading-font-color-l2;
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: row;
+      margin: $body-margin;
+      justify-content: center;
+
+      .background {
+        display: flex;
+        flex-direction: column;
+        padding-right: 4rem;
+
+        .text {
+          margin: 0.5rem 0;
+        }
+
+        .text>a {
+          color: $nav-font-color-hover;
+          text-decoration: underline;
+        }
+
+        .text>a:hover {
+          color: $button-color-hover;
+        }
+      }
+
+      .skills {
+        display: flex;
+        flex-direction: column;
+        line-height: 1rem;
+        padding: 0 1rem;
+
+        .text {
+          display: flex;
+          flex-flow: column wrap;
+          width: 18rem;
+          height: 16.2rem;
+          gap: 10px 30px;
+        }
+
+        .text>p {
+          margin: 0 0 0.25rem 0;
+        }
+      }
+
+      .skills>h3 {
+        margin: 0.75rem 0 1.5rem 0;
+      }
+    }
+  }
+}
+
+@include devices(laptop) {
+  .wrapper {
+    .about {
+      width: 1000px;
+      margin: auto;
+    }
+  }
+}
+
+@include devices(tablet) {
+  .wrapper {
+    .about {
+      margin: auto;
+
+      .skills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@include devices(mobile) {
+  .wrapper {
+    .about {
+      .skills {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 1rem 2.5rem;
+      }
+    }
+  }
+}
