@@ -1,110 +1,91 @@
 @import '../sass/variables.scss';
 
-.wrapper {
+.about {
   background-color: $background-color-l2;
-  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.25rem 0;
 
-  .about {
-    background-color: $background-color-l2;
+  .body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: $body-margin;
     justify-content: center;
 
-    .header {
+    .background {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      padding-right: 4rem;
 
-      .title {
-        display: inline-block;
-        margin: 2rem 0 0.5rem;
-        padding: 0 1rem 0.25rem;
-        border-bottom: 3px solid $heading-font-color-l2;
+      .text {
+        margin: 0.25rem 0;
+        line-height: 1.1rem;
+        font-size: 0.75rem;
+        font-family: $font;
+        text-align: justify;
+      }
+
+      .text>a {
+        color: $nav-font-color-hover;
+        text-decoration: underline;
+      }
+
+      .text>a:hover {
+        color: $button-color-hover;
       }
     }
 
-    .body {
+    .skills {
       display: flex;
-      flex-direction: row;
-      margin: $body-margin;
-      justify-content: center;
+      flex-direction: column;
+      padding: 0 1rem;
 
-      .background {
+      .text {
         display: flex;
-        flex-direction: column;
-        padding-right: 4rem;
-
-        .text {
-          margin: 0.5rem 0;
-        }
-
-        .text>a {
-          color: $nav-font-color-hover;
-          text-decoration: underline;
-        }
-
-        .text>a:hover {
-          color: $button-color-hover;
-        }
-      }
-
-      .skills {
-        display: flex;
-        flex-direction: column;
+        flex-flow: column wrap;
+        width: 18rem;
+        height: 12rem;
+        gap: 2.5px 30px;
+        font-size: 0.75rem;
+        font-family: $font;
         line-height: 1rem;
-        padding: 0 1rem;
-
-        .text {
-          display: flex;
-          flex-flow: column wrap;
-          width: 18rem;
-          height: 16.2rem;
-          gap: 10px 30px;
-        }
-
-        .text>p {
-          margin: 0 0 0.25rem 0;
-        }
       }
 
-      .skills>h3 {
-        margin: 0.75rem 0 1.5rem 0;
+      .text>p {
+        margin: 0 0 0.25rem 0;
       }
     }
   }
 }
 
+
 @include devices(laptop) {
-  .wrapper {
-    .about {
-      width: 1000px;
-      margin: auto;
-    }
+  .about {
+    width: 1000px;
+    margin: auto;
   }
 }
 
 @include devices(tablet) {
-  .wrapper {
-    .about {
-      margin: auto;
+  .about {
+    margin: auto;
 
-      .skills {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
+    .skills {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 }
 
 @include devices(mobile) {
-  .wrapper {
-    .about {
-      .skills {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 1rem 2.5rem;
-      }
+  .about {
+    .skills {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 1rem 2.5rem;
     }
   }
 }

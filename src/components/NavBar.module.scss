@@ -1,0 +1,29 @@
+@import '../sass/variables.scss';
+
+.nav {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $background-color-l1;
+
+  .navButton {
+    margin: 0 1rem 0 1rem;
+    border: none;
+    background-color: transparent;
+    color: $nav-font-color;
+    cursor: pointer;
+  }
+
+  .navButton:hover,
+  .navButton:active {
+    color: $nav-font-color-hover;
+  }
+}
+
+@include devices(laptop) {
+  .nav {
+    width: 1000px;
+    margin: auto;
+  }
+}

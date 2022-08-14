@@ -5,15 +5,15 @@ import classes from './About.module.scss';
 const About = () => {
 
   return (
-    <div className={classes.wrapper}>
+    <section>
       <div className={classes.about}>
-        <div className={classes.header}>
-          <h2 className={classes.title}>ABOUT ME</h2>
+        <div className='header'>
+          <h2>ABOUT</h2>
         </div>
         <div className={classes.body}>
           <div className={classes.background}>
-            <h3 className={classes.text}>Background</h3>
-            <p className={classes.text}>I am currently a freelance Software Engineer splitting my time between client work and personal projects. I am passionate about making the world a more egalitarian place and frequently think about ideas and solutions that can do that.</p>
+            <h3>Background</h3>
+            <p className={classes.text}>I am currently a freelance Software Engineer splitting my time between client work and personal projects. I am passionate about making the world a more egalitarian place and frequently think about ideas and solutions which hopes to make that come to fruition.</p>
             <p className={classes.text}>When I am not coding, I am either writing a new screenplay or actively working on a film/commerical set. You can check out my film and production work <a href="https://mithin.tv">here</a>.</p>
             <Button size='md'>DOWNLOAD RESUME <i class="fa-solid fa-file-arrow-down"></i></Button>
           </div>
@@ -48,7 +48,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
   );
 };

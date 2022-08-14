@@ -10,6 +10,7 @@
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
     "sass": "^1.54.4",
+    "smooth-scrollbar": "^8.7.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

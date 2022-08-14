@@ -1,131 +1,98 @@
 @import '../sass/variables.scss';
 
-.wrapper {
+.home {
   background-color: $background-color-l1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
-  .home {
-    background-color: $background-color-l1;
+  .banner {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    height: 32.5rem;
+    margin: $body-margin;
+    justify-content: center;
 
-    .nav {
-      position: sticky;
-      display: flex;
-      height: 5rem;
-      padding-right: 2rem;
-      align-self: flex-end;
-      align-items: center;
-
-      .navButton {
-        margin: 0 1rem 0 1rem;
-        border: none;
-        background-color: transparent;
-        color: $nav-font-color;
-        cursor: pointer;
-      }
-
-      .navButton:hover,
-      .navButton:active {
-        color: $nav-font-color-hover;
-      }
+    .bannerLead {
+      line-height: 0.5rem;
+      margin: 0.25rem 0 0.25rem 0;
+      color: #919191;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.15rem;
     }
 
-    .banner {
-      display: flex;
-      flex-direction: column;
-      height: 32.5rem;
-      margin: $body-margin;
-      justify-content: center;
+    .bannerTitle {
+      line-height: 1rem;
+      margin: 1rem 0 1rem 0;
+      color: #393939;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
 
-      .bannerLead {
-        line-height: 0.5rem;
-        margin: 0.25rem 0 0.25rem 0;
-        color: #919191;
-        font-family: 'Poppins', sans-serif;
-        letter-spacing: 0.15rem;
-      }
-
-      .bannerTitle {
-        line-height: 1rem;
-        margin: 1rem 0 1rem 0;
-        color: #393939;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 2.5rem;
-      }
-
-      .bannerQuote {
-        margin: 0.5rem 0 0rem 0;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 300;
-        font-style: italic;
-        font-size: 0.85rem;
-        text-align: justify;
-        width: 30em;
-      }
+    .bannerQuote {
+      margin: 0.5rem 0 0rem 0;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 0.85rem;
+      text-align: justify;
+      width: 30em;
     }
   }
 }
 
-
 @include devices(laptop) {
-  .wrapper {
-    .home {
-      width: 1000px;
-      margin: auto;
-    }
+  .home {
+    width: 1000px;
+    margin: auto;
   }
 }
 
 @include devices(tablet) {
-  .wrapper {
-    .home {
-      margin: auto;
+  .home {
+    margin: auto;
 
-      .banner {
-        margin: 0 2rem;
-        text-align: center;
-        align-items: center;
+    .banner {
+      margin: 0 2rem;
+      text-align: center;
+      align-items: center;
 
-        .bannerTitle {
-          font-size: 2.75rem;
-          line-height: 2.75rem;
-          margin: 0.2rem 0;
-        }
+      .bannerTitle {
+        font-size: 2.75rem;
+        line-height: 2.75rem;
+        margin: 0.2rem 0;
+      }
 
-        .bannerQuote {
-          width: 22.5rem;
-          margin-top: 0.33rem;
-        }
+      .bannerQuote {
+        width: 22.5rem;
+        margin-top: 0.33rem;
       }
     }
   }
 }
 
 @include devices(mobile) {
-  .wrapper {
-    .home {
-      margin: auto;
+  .home {
+    margin: auto;
 
-      .banner {
-        margin: 0 2rem;
-        text-align: center;
-        align-items: center;
+    .banner {
+      margin: 0 2rem;
+      text-align: center;
+      align-items: center;
 
-        .bannerLead {
-          font-size: 1rem;
-        }
+      .bannerLead {
+        font-size: 1rem;
+      }
 
-        .bannerTitle {
-          font-size: 3.33rem;
-          line-height: 2.75rem;
-          margin: 0.25rem 0;
-        }
+      .bannerTitle {
+        font-size: 3.33rem;
+        line-height: 2.75rem;
+        margin: 0.25rem 0;
+      }
 
-        .bannerQuote {
-          width: 15rem;
-        }
+      .bannerQuote {
+        width: 15rem;
       }
     }
   }

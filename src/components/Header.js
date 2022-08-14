@@ -5,14 +5,8 @@ import classes from './Header.module.scss';
 const Header = () => {
 
   return (
-    <div className={classes.wrapper}>
+    <section>
       <div className={classes.home}>
-        <nav className={classes.nav}>
-          <button className={classes.navButton}>HOME</button>
-          <button className={classes.navButton}>ABOUT</button>
-          <button className={classes.navButton}>PORTFOLIO</button>
-          <button className={classes.navButton}>CONTACT</button>
-        </nav>
         <div className={classes.banner}>
           <h3 className={classes.bannerLead}>HELLO, MY NAME IS</h3>
           <h1 className={classes.bannerTitle}>MITHIN THOMAS</h1>
@@ -20,7 +14,7 @@ const Header = () => {
           <Button>MY WORK <i class="fa-solid fa-briefcase"></i></Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
