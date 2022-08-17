@@ -74,20 +74,26 @@ section.nav {
 
 @include devices(monitor) {
   section>div {
-    width: 1000px;
+    width: 1024px;
     margin: auto;
   }
 }
 
 @include devices(laptop) {
   section>div {
-    width: 1000px;
+    width: 768px;
     margin: auto;
+  }
+
+  section>div>div {
+    margin: $body-margin-md;
   }
 }
 
 @include devices(tablet) {
+
   section>div {
+    width: 425px;
     margin: auto;
   }
 
@@ -98,10 +104,11 @@ section.nav {
 
 @include devices(mobile) {
   section>div {
+    width: 320px;
     margin: auto;
   }
 
   section>div>div {
-    margin: $body-margin-md;
+    margin: $body-margin-sm;
   }
 }

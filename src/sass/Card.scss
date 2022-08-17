@@ -3,7 +3,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  height: 100%;
   background-color: $background-color-l2;
 }
 
@@ -34,8 +33,6 @@
     .card-icons>a:hover {
       color: $button-color-hover;
     }
-
-
   }
 
   .tech {
@@ -45,25 +42,33 @@
   }
 
   .tech span {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     margin: 0.25rem 0.5rem 0.25rem 0;
     padding: 0.25rem 0.5rem;
     border: 1px solid $button-color-hover
   }
 }
 
+@include devices(monitor) {
+  .card {
+    width: 32.56%;
+  }
+}
+
 @include devices(laptop) {
   .card {
-    width: 32.5%;
+    width: 49.2%;
   }
 }
 
 @include devices(tablet) {
   .card {
-    width: 49.1%;
+    width: 100%;
   }
 }
 
 @include devices(mobile) {
-  .card {}
+  .card {
+    width: 100%;
+  }
 }

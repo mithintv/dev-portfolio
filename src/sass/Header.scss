@@ -14,3 +14,21 @@
     border-bottom: 3px solid #BCBCBC;
   }
 }
+
+@include devices(tablet) {
+
+  .header {
+    .header-text {
+      margin: 0 0 1rem;
+    }
+  }
+}
+
+@include devices(mobile) {
+
+  .header {
+    .header-text {
+      margin: 0 0 0.75rem;
+    }
+  }
+}

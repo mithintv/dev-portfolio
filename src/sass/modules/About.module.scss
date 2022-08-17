@@ -54,14 +54,6 @@
   }
 }
 
-@include devices(monitor) {
-  .about {
-    width: 1000px;
-    margin: auto;
-  }
-}
-
-
 @include devices(tablet) {
   .about {
     .body {
@@ -72,19 +64,31 @@
       text-align: center;
 
       .background {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         padding-right: 0rem;
+      }
 
-        .skills {
-          display: flex;
-          flex-direction: column;
-          margin: 0;
-          padding: 1rem 2.5rem;
-        }
+      .skills {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@include devices(mobile) {
+  .about {
+    .body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .background {
+        padding-right: 0rem;
+      }
+
+      .skills {
+        margin-bottom: 1rem;
       }
     }
   }

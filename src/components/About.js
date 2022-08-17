@@ -6,13 +6,13 @@ import classes from '../sass/modules/About.module.scss';
 
 const About = () => {
 
-  const [tablet, setTablet] = useState(false);
+  const [tablet, settablet] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setTablet(true);
-      } else setTablet(false);
+        settablet(true);
+      } else settablet(false);
     };
     window.addEventListener('resize', handleResize);
 
