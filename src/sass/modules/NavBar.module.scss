@@ -1,9 +1,8 @@
-@import '../sass/variables.scss';
+@import '../variables.scss';
 
 .nav {
-  position: sticky;
   display: flex;
-  justify-content: flex-end;
+  justify-content: right;
   align-items: center;
   background-color: $background-color-l1;
 

@@ -1,15 +1,13 @@
 import Button from '../interface/Button';
-
-import classes from './About.module.scss';
+import Header from '../interface/Header';
+import classes from '../sass/modules/About.module.scss';
 
 const About = () => {
 
   return (
     <section>
       <div className={classes.about}>
-        <div className='header'>
-          <h2>ABOUT</h2>
-        </div>
+        <Header>ABOUT</Header>
         <div className={classes.body}>
           <div className={classes.background}>
             <h3>Background</h3>

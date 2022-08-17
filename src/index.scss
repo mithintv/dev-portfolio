@@ -32,29 +32,29 @@ h6 {
   color: $heading-font-color-l2;
 }
 
-p {
-  color: $p-color;
-}
-
-h2 {
-  display: inline-block;
-  margin: 0 0 3.5rem;
-  padding: 0 1rem 0rem;
-  font-size: 2rem;
-  color: $heading-font-color-l2;
-  border-bottom: 3px solid $heading-font-color-l2;
-}
-
 h3 {
   margin: 1rem 0 0.75rem 0;
 }
 
-h2.white {
-  color: $heading-font-color-l1;
-  border-bottom: 3px solid $heading-font-color-l1;
+h4 {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+p {
+  color: $p-color;
+  margin-top: 0;
+  line-height: 1.1rem;
+  font-size: 0.75rem;
+  font-family: $font;
+}
+
+span {
+  font-family: $font;
 }
 
 section {
+  display: flex;
+  justify-self: center;
   background-color: $background-color-l1;
   padding: 3rem 0 3rem;
 }
@@ -63,13 +63,49 @@ section:nth-child(odd) {
   background-color: $background-color-l2;
 }
 
+section>div>div {
+  margin: $body-margin
+}
+
 section.nav {
   background-color: $background-color-l1;
   padding: 3rem 0 0 0;
 }
 
-div.header {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
+@include devices(monitor) {
+  section>div {
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+@include devices(laptop) {
+  section {
+    width: 107.22%;
+  }
+
+  section>div {
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+@include devices(tablet) {
+  section {
+    width: 193.1%;
+  }
+
+  section>div {
+    margin: auto;
+  }
+}
+
+@include devices(mobile) {
+  section {
+    width: 257.1%;
+  }
+
+  section>div {
+    margin: auto;
+  }
 }

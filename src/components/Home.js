@@ -1,6 +1,6 @@
 import Button from '../interface/Button';
 
-import classes from './Header.module.scss';
+import classes from '../sass/modules/Home.module.scss';
 
 const Header = () => {
 

@@ -16,14 +16,21 @@ $button-color-hover: #000000;
 
 // Breakpoints
 @mixin devices ($breakpoint) {
-  @if $breakpoint ==laptop {
+
+  @if $breakpoint ==monitor {
     @media screen and (min-width: 1024px) {
       @content;
     }
   }
 
+  @if $breakpoint ==laptop {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+
   @if $breakpoint ==tablet {
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 425px) and (max-width: 768px) {
       @content;
     }
   }

@@ -1,11 +1,20 @@
-import classes from './Portfolio.module.scss';
+import classes from '../sass/modules/Portfolio.module.scss';
+
+import Header from '../interface/Header';
+import Card from '../interface/Card';
 
 const Portfolio = () => {
 
   return (
     <section>
-      <div className='header'>
-        <h2 className="white">PORTFOLIO</h2>
+      <div>
+        <Header>PORTFOLIO</Header>
+        <div className={classes.content}>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
     </section>
   );
