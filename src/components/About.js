@@ -1,8 +1,22 @@
+import React, { useState, useEffect } from 'react';
+
 import Button from '../interface/Button';
 import Header from '../interface/Header';
 import classes from '../sass/modules/About.module.scss';
 
 const About = () => {
+
+  const [tablet, setTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setTablet(true);
+      } else setTablet(false);
+    };
+    window.addEventListener('resize', handleResize);
+
+  }, []);
 
   return (
     <section>
@@ -13,7 +27,7 @@ const About = () => {
             <h3>Background</h3>
             <p className={classes.text}>I am currently a freelance Software Engineer splitting my time between client work and personal projects. I am passionate about making the world a more egalitarian place and frequently think about ideas and solutions which hopes to make that come to fruition.</p>
             <p className={classes.text}>When I am not coding, I am either writing a new screenplay or actively working on a film/commerical set. You can check out my film and production work <a href="https://mithin.tv">here</a>.</p>
-            <Button size='md'>DOWNLOAD RESUME <i class="fa-solid fa-file-arrow-down"></i></Button>
+            {!tablet && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
           </div>
           <div className={classes.skills}>
             <h3>Technologies</h3>
@@ -44,6 +58,7 @@ const About = () => {
               <p>VSCode</p>
             </div>
           </div>
+          {tablet && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
         </div>
       </div>
     </section>

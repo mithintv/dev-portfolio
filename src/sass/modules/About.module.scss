@@ -61,25 +61,31 @@
   }
 }
 
-@include devices(laptop) {
-  .about {
-    margin: auto;
-
-    .skills {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  }
-}
 
 @include devices(tablet) {
   .about {
-    .skills {
+    .body {
       display: flex;
       flex-direction: column;
-      margin: 0;
-      padding: 1rem 2.5rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-right: 0rem;
+
+        .skills {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          padding: 1rem 2.5rem;
+        }
+      }
     }
   }
 }

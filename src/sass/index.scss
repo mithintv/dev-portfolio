@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;900&display=swap');
-@import './sass/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@400;500;600;700;900&display=swap');
+@import './variables.scss';
 
 
 html {
@@ -80,10 +80,6 @@ section.nav {
 }
 
 @include devices(laptop) {
-  section {
-    width: 107.22%;
-  }
-
   section>div {
     width: 1000px;
     margin: auto;
@@ -91,21 +87,21 @@ section.nav {
 }
 
 @include devices(tablet) {
-  section {
-    width: 193.1%;
-  }
-
   section>div {
     margin: auto;
+  }
+
+  section>div>div {
+    margin: $body-margin-md;
   }
 }
 
 @include devices(mobile) {
-  section {
-    width: 257.1%;
-  }
-
   section>div {
     margin: auto;
+  }
+
+  section>div>div {
+    margin: $body-margin-md;
   }
 }

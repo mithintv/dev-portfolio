@@ -35,11 +35,10 @@ section {
     .bannerQuote {
       margin: 0.5rem 0 0rem 0;
       font-family: 'Poppins', sans-serif;
-      font-weight: 300;
+      font-weight: 200;
       font-style: italic;
       font-size: 0.85rem;
-      text-align: justify;
-      width: 30em;
+      width: 35rem;
     }
   }
 }
@@ -53,7 +52,6 @@ section {
   }
 
   .bannerQuote {
-    width: 22.5rem;
     margin-top: 0.33rem;
   }
 }
@@ -66,19 +64,18 @@ section {
       align-items: center;
 
       .bannerLead {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 1.45rem;
       }
 
       .bannerTitle {
-        font-size: 4rem;
-        line-height: 4rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
         margin: 0.25rem 0;
       }
 
       .bannerQuote {
-        font-size: 1.15rem;
-        width: 35rem;
+        text-align: justify;
+        width: 97.5%;
       }
     }
   }
@@ -92,19 +89,18 @@ section {
       align-items: center;
 
       .bannerLead {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 1rem;
       }
 
       .bannerTitle {
-        font-size: 4rem;
-        line-height: 4rem;
+        font-size: 1.75rem;
+        line-height: 1.75rem;
         margin: 0.25rem 0;
       }
 
       .bannerQuote {
-        font-size: 1rem;
-        width: 35rem;
+        text-align: justify;
+        width: 100%;
       }
     }
   }
