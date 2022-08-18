@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.social {
+  font-size: 1.5rem;
+  padding: 0 0.20rem 1.5rem;
+  text-decoration: none;
+  color: $button-color;
+}
+
+.social:hover {
+  color: $button-color-hover;
+}

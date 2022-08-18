@@ -21,7 +21,7 @@
   cursor: pointer;
 }
 
-.primary>i {
+.primary i {
   padding-left: 0.75rem;
   font-size: 0.85rem;
 }
@@ -34,4 +34,9 @@
 .lg {
   @extend .primary;
   width: 22.5rem;
+}
+
+.xl {
+  @extend .primary;
+  width: 100%;
 }
