@@ -1,11 +1,42 @@
+import React, { useState, useEffect } from 'react';
+
 import classes from "../sass/modules/NavBar.module.scss";
 
 import Button from '../interface/Button';
 
 const Navbar = () => {
 
+  const [scroll, setScroll] = useState(0);
+  const [showNav, setShowNav] = useState(true);
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scroll < 100) {
+        console.log('top');
+        setTop(true);
+      }
+      else if (scroll < window.scrollY) {
+        console.log('going down');
+        setShowNav(false);
+        setTop(false);
+      } else {
+        console.log('going up');
+        setShowNav(true);
+        setTop(false);
+      }
+      setScroll(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+
   return (
-    <nav className={classes.section}>
+    <nav className={(top && classes.top) || (showNav && classes.show) || classes.section}>
       <nav className={classes.nav}>
         <button className={classes.navButton}>HOME</button>
         <button className={classes.navButton}>ABOUT</button>

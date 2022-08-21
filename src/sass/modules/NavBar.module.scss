@@ -5,7 +5,13 @@
   justify-content: right;
   align-items: center;
   background-color: $background-color-l1;
-  padding: 2rem 1rem 0 0;
+  padding: 2rem 1rem 1.5rem 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  transition: all 0.33s ease;
+  transform: translateY(-100px);
+  box-shadow: 0px 0px 0px #dadada;
 
   .nav {
     display: flex;
@@ -30,6 +36,17 @@
       color: $nav-font-color-hover;
     }
   }
+}
+
+.show {
+  @extend .section;
+  transform: translateY(0px);
+  box-shadow: 0px 5px 10px #dadada;
+}
+
+.top {
+  @extend .show;
+  box-shadow: 0px 0px 0px #dadada;
 }
 
 @include devices(tablet) {
