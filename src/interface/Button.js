@@ -3,7 +3,9 @@ import '../sass/Button.scss';
 const Button = (props) => {
 
   return (
-    <button className={props.size ? props.size : 'primary'} onClick={props.onClick}>{props.children}</button>
+    <button
+      className={props.size ? props.size : 'primary'}
+      onClick={props.onClick}>{props.children}</button>
   );
 };
 

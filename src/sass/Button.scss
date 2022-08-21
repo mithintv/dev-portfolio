@@ -13,7 +13,7 @@
   height: 3rem;
   justify-content: center;
   align-items: center;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0rem;
 }
 
 .primary:hover {
@@ -24,6 +24,14 @@
 .primary i {
   padding-left: 0.75rem;
   font-size: 0.85rem;
+}
+
+.sm {
+  @extend .primary;
+  font-size: 0.85rem;
+  width: 6rem;
+  height: 2.25rem;
+  margin: 0 auto;
 }
 
 .md {

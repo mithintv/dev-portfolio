@@ -1,28 +1,39 @@
 @import '../variables.scss';
 
-.nav {
+.section {
   display: flex;
   justify-content: right;
   align-items: center;
   background-color: $background-color-l1;
+  padding: 2rem 1rem 0 0;
 
-  .navButton {
-    margin: 0 1rem 0 1rem;
-    border: none;
-    background-color: transparent;
-    color: $nav-font-color;
-    cursor: pointer;
-  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
-  .navButton:hover,
-  .navButton:active {
-    color: $nav-font-color-hover;
+    Button {
+      margin: 0 1rem;
+    }
+
+    .navButton {
+      font-size: 0.75rem;
+      margin: 0 1rem 0 1rem;
+      border: none;
+      background-color: transparent;
+      color: $nav-font-color;
+      cursor: pointer;
+    }
+
+    .navButton:hover,
+    .navButton:active {
+      color: $nav-font-color-hover;
+    }
   }
 }
 
-@include devices(laptop) {
+@include devices(tablet) {
   .nav {
-    width: 1000px;
-    margin: auto;
+    visibility: hidden;
   }
 }

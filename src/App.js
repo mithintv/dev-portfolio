@@ -12,11 +12,11 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <SideBar />
       <Home />
       <About />
       <Portfolio />
       <Contact />
+      <SideBar />
     </React.Fragment>
   );
 }

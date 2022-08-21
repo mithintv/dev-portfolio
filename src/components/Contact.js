@@ -11,9 +11,9 @@ const Contact = () => {
       <div>
         <Header>CONTACT</Header>
         <div className={classes.body}>
-          <div className={classes.intro}>
+          {/* <div className={classes.intro}>
             <p>I am currently actively looking for new roles and opportunities. Please do not hesitate to reach out if you are interested in working together. Cheers!</p>
-          </div>
+          </div> */}
           <form className={classes.form}>
             <div className={classes.formHeader}>
               <input

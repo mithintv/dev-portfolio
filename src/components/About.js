@@ -6,13 +6,18 @@ import classes from '../sass/modules/About.module.scss';
 
 const About = () => {
 
-  const [tablet, settablet] = useState(false);
+  const [tablet, setTablet] = useState(false);
+  const [laptop, setLaptop] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        settablet(true);
-      } else settablet(false);
+      if (window.innerWidth < 768 && window.innerWidth >= 425) {
+        setTablet(true);
+      } else setTablet(false);
+      if (window.innerWidth < 1024 && window.innerWidth >= 768) {
+        setLaptop(true);
+      } else setLaptop(false);
+
     };
     window.addEventListener('resize', handleResize);
 
@@ -27,7 +32,8 @@ const About = () => {
             <h3>Background</h3>
             <p className={classes.text}>I am currently a freelance Software Engineer splitting my time between client work and personal projects. I am passionate about making the world a more egalitarian place and frequently think about ideas and solutions which hopes to make that come to fruition.</p>
             <p className={classes.text}>When I am not coding, I am either writing a new screenplay or actively working on a film/commerical set. You can check out my film and production work <a href="https://mithin.tv">here</a>.</p>
-            {!tablet && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
+            {!tablet && !laptop && <Button
+              size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
           </div>
           <div className={classes.skills}>
             <h3>Technologies</h3>
@@ -59,6 +65,9 @@ const About = () => {
             </div>
           </div>
           {tablet && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
+        </div>
+        <div className={classes.button}>
+          {laptop && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
         </div>
       </div>
     </section>
