@@ -13,15 +13,12 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (scroll < 100) {
-        console.log('top');
         setTop(true);
       }
       else if (scroll < window.scrollY) {
-        console.log('going down');
         setShowNav(false);
         setTop(false);
       } else {
-        console.log('going up');
         setShowNav(true);
         setTop(false);
       }

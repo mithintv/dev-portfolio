@@ -18,7 +18,8 @@
     .background {
       display: flex;
       flex-direction: column;
-      padding-right: 0.5rem;
+      padding-right: 3rem;
+      width: 50%;
 
       .text {
         margin: 0.25rem 0;
@@ -39,11 +40,11 @@
       display: flex;
       flex-direction: column;
       padding: 0 1rem;
+      width: 50%;
 
-      .text {
+      .tech {
         display: flex;
         flex-flow: column wrap;
-        width: 18rem;
         height: 12rem;
         gap: 2.5px 30px;
         font-size: 0.75rem;
@@ -51,8 +52,32 @@
         line-height: 1rem;
       }
 
-      .text>p {
+      .tech>p {
         margin: 0 0 0.25rem 0;
+      }
+    }
+  }
+}
+
+@include devices(laptop) {
+  .about {
+    .body {
+      display: flex;
+      flex-direction: column;
+
+      .background {
+        padding-right: 0rem;
+        width: 100%;
+      }
+
+      .skills {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0;
+
+        .tech {
+          height: 10rem;
+        }
       }
     }
   }
@@ -63,16 +88,20 @@
     .body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
 
       .background {
         padding-right: 0rem;
+        width: 100%;
       }
 
       .skills {
         margin-bottom: 1rem;
+        padding: 0;
+        width: 100%;
+
+        .tech {
+          height: 12rem;
+        }
       }
     }
   }
@@ -83,16 +112,24 @@
     .body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+
+      button {
+        font-size: 0.85rem;
+        width: 14rem;
+      }
 
       .background {
         padding-right: 0rem;
+        width: 100%;
       }
 
       .skills {
         margin-bottom: 1rem;
+        padding: 0;
+
+        .tech {
+          height: 18rem;
+        }
       }
     }
   }

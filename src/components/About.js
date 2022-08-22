@@ -11,10 +11,10 @@ const About = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768 && window.innerWidth >= 425) {
+      if (window.innerWidth < 768) {
         setTablet(true);
       } else setTablet(false);
-      if (window.innerWidth < 1024 && window.innerWidth >= 768) {
+      if (window.innerWidth <= 1024 && window.innerWidth >= 768) {
         setLaptop(true);
       } else setLaptop(false);
 
@@ -37,7 +37,7 @@ const About = () => {
           </div>
           <div className={classes.skills}>
             <h3>Technologies</h3>
-            <div className={classes.text}>
+            <div className={classes.tech}>
               <p>JavaScript</p>
               <p>React</p>
               <p>Redux</p>

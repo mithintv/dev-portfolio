@@ -51,13 +51,13 @@
 
 @include devices(monitor) {
   .card {
-    width: 32.53%;
+    width: 32.5%;
   }
 }
 
 @include devices(laptop) {
   .card {
-    width: 49.17%;
+    width: 49.15%;
   }
 }
 

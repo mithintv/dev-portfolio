@@ -18,3 +18,15 @@
   margin: 0px auto;
   background-color: black;
 }
+
+@include devices(tablet) {
+  .sidebar {
+    visibility: hidden;
+  }
+}
+
+@include devices(mobile) {
+  .sidebar {
+    visibility: hidden;
+  }
+}

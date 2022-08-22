@@ -52,11 +52,21 @@ span {
   font-family: $font;
 }
 
+input,
+textarea {
+  font-family: $font;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid black;
+}
+
 section {
   display: flex;
   justify-self: center;
   background-color: $background-color-l1;
-  padding: 9rem 0 17rem;
+  padding: 15rem 0 15rem;
 }
 
 section:nth-child(odd) {
@@ -88,22 +98,22 @@ section>div>div {
 @include devices(tablet) {
 
   section>div {
-    width: 425px;
-    margin: auto;
-  }
-
-  section>div>div {
-    margin: $body-margin-md;
-  }
-}
-
-@include devices(mobile) {
-  section>div {
-    width: 320px;
+    width: 90%;
     margin: auto;
   }
 
   section>div>div {
     margin: $body-margin-sm;
+  }
+}
+
+@include devices(mobile) {
+  section>div {
+    width: 90%;
+    margin: auto;
+  }
+
+  section>div>div {
+    margin: $body-margin-xs;
   }
 }

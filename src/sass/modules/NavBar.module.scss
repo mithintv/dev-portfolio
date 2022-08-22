@@ -50,7 +50,13 @@
 }
 
 @include devices(tablet) {
-  .nav {
+  .section {
+    visibility: hidden;
+  }
+}
+
+@include devices(mobile) {
+  .section {
     visibility: hidden;
   }
 }
