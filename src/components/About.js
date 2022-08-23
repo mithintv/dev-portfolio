@@ -24,7 +24,7 @@ const About = () => {
   }, []);
 
   return (
-    <section>
+    <section id='about'>
       <div className={classes.about}>
         <Header>ABOUT</Header>
         <div className={classes.body}>

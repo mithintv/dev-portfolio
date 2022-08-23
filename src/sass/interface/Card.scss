@@ -1,9 +1,26 @@
-@import './variables.scss';
+@import '../variables.scss';
 
 .card {
   display: flex;
   flex-direction: column;
+  text-align: left;
   background-color: $background-color-l2;
+  transition: all 0.5s ease;
+  box-shadow: 5px 5px 10px rgb(201, 201, 201);
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-content {
@@ -56,13 +73,13 @@
 
 @include devices(monitor) {
   .card {
-    width: 32.5%;
+    width: 49.15%;
   }
 }
 
 @include devices(laptop) {
   .card {
-    width: 49.15%;
+    width: 95%;
   }
 }
 

@@ -1,4 +1,4 @@
-import '../sass/Header.scss';
+import '../sass/interface/Header.scss';
 
 
 const Header = props => {

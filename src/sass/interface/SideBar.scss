@@ -1,9 +1,9 @@
-@import './variables.scss';
+@import '../variables.scss';
 
 .sidebar {
   position: fixed;
   bottom: 0px;
-  left: 25px;
+  left: 30px;
   right: auto;
   display: flex;
   flex-direction: column;

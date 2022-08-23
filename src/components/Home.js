@@ -5,7 +5,7 @@ import classes from '../sass/modules/Home.module.scss';
 const Header = () => {
 
   return (
-    <section>
+    <section id='home'>
       <div className={classes.home}>
         <div className={classes.banner}>
           <h3 className={classes.bannerLead}>HELLO, MY NAME IS</h3>

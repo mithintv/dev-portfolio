@@ -7,9 +7,11 @@ html {
 }
 
 body {
+  background-color: $background-color-l1;
   display: flex;
   flex-direction: column;
   margin: auto;
+  padding-bottom: 10rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -66,12 +68,12 @@ section {
   display: flex;
   justify-self: center;
   background-color: $background-color-l1;
-  padding: 15rem 0 15rem;
+  padding: 14rem 0 0;
 }
 
-section:nth-child(odd) {
-  background-color: $background-color-l2;
-}
+// section:nth-child(odd) {
+//   background-color: $background-color-l2;
+// }
 
 section>div>div {
   margin: $body-margin

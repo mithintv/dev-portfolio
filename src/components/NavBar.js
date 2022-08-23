@@ -35,10 +35,10 @@ const Navbar = () => {
   return (
     <nav className={(top && classes.top) || (showNav && classes.show) || classes.section}>
       <nav className={classes.nav}>
-        <button className={classes.navButton}>HOME</button>
-        <button className={classes.navButton}>ABOUT</button>
-        <button className={classes.navButton}>PORTFOLIO</button>
-        <button className={classes.navButton}>CONTACT</button>
+        <a href='#home' className={classes.navButton}>HOME</a>
+        <a href='#about' className={classes.navButton}>ABOUT</a>
+        <a href='#portfolio' className={classes.navButton}>PORTFOLIO</a>
+        <a href='#contact' className={classes.navButton}>CONTACT</a>
         <Button className={classes.navButton} size='sm'>Resume</Button>
       </nav>
     </nav>

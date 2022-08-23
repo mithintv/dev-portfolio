@@ -12,19 +12,22 @@
   transition: all 0.33s ease;
   transform: translateY(-100px);
   box-shadow: 0px 0px 0px #dadada;
+  z-index: 1;
 
   .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 
     Button {
       margin: 0 1rem;
     }
 
     .navButton {
+      text-decoration: none;
       font-size: 0.75rem;
-      margin: 0 1rem 0 1rem;
+      margin: 0 1.5rem;
       border: none;
       background-color: transparent;
       color: $nav-font-color;

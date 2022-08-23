@@ -1,10 +1,13 @@
-import '../sass/Card.scss';
+import '../sass/interface/Card.scss';
 
 const Card = props => {
 
   return (
-    <div className='card'>
-      <img alt='project' src='https://wp.regaltheme.com/mim/wp-content/uploads/2017/06/portfolio-5-1.jpg' />
+    <button rel="noreferrer"
+      target="_blank"
+      href={props.link}
+      className='card'>
+      <img alt='project' src={props.img} />
       <div className='card-content'>
         <div className='card-header'>
           <h4>{props.title}</h4>
@@ -23,12 +26,12 @@ const Card = props => {
         </div>
         <p>{props.description}</p>
         <div className='tech'>
-          {props.tech && props.tech.map(element => {
-            return (<span>{element}</span>);
+          {props.tech && props.tech.map((element, index) => {
+            return (<span key={index}>{element}</span>);
           })}
         </div>
       </div>
-    </div>);
+    </button>);
 };
 
 export default Card;

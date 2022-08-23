@@ -7,7 +7,7 @@ import classes from "../sass/modules/Contact.module.scss";
 const Contact = () => {
 
   return (
-    <section>
+    <section id='contact'>
       <div>
         <Header>CONTACT</Header>
         <div className={classes.body}>
