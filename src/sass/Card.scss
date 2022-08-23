@@ -7,7 +7,10 @@
 }
 
 .card-content {
+  display: flex;
+  flex-direction: column;
   padding: 0.5rem 1.25rem 1rem;
+  height: 100%;
 
   .card-header {
     display: flex;
@@ -36,9 +39,11 @@
   }
 
   .tech {
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-end;
   }
 
   .tech span {

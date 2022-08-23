@@ -64,7 +64,9 @@ const About = () => {
               <p>VSCode</p>
             </div>
           </div>
-          {tablet && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
+          <div className={classes.button}>
+            {tablet && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
+          </div>
         </div>
         <div className={classes.button}>
           {laptop && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
