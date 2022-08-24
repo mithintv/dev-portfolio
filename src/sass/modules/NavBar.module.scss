@@ -34,6 +34,26 @@
       cursor: pointer;
     }
 
+    .one {
+      animation: appear 0.25s ease;
+    }
+
+    .two {
+      animation: appear 0.40s ease;
+    }
+
+    .three {
+      animation: appear 0.65s ease;
+    }
+
+    .four {
+      animation: appear 0.80s ease;
+    }
+
+    .five {
+      animation: appear 0.95s ease;
+    }
+
     .navButton:hover,
     .navButton:active {
       color: $nav-font-color-hover;
@@ -61,5 +81,17 @@
 @include devices(mobile) {
   .section {
     visibility: hidden;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

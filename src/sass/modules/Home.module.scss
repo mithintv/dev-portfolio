@@ -21,6 +21,7 @@ section {
       color: #919191;
       font-family: 'Poppins', sans-serif;
       letter-spacing: 0.15rem;
+      animation: appear 0.5s ease;
     }
 
     .bannerTitle {
@@ -30,6 +31,7 @@ section {
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
       font-size: 2.5rem;
+      animation: appear 1s ease;
     }
 
     .bannerQuote {
@@ -39,7 +41,12 @@ section {
       font-style: italic;
       font-size: 0.85rem;
       width: 35rem;
+      animation: appear 1.5s ease;
     }
+  }
+
+  .banner a {
+    animation: appear 2s ease;
   }
 
   .banner a:active {
@@ -108,5 +115,17 @@ section {
         width: 100%;
       }
     }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

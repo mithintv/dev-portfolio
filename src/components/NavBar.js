@@ -35,11 +35,11 @@ const Navbar = () => {
   return (
     <nav className={(top && classes.top) || (showNav && classes.show) || classes.section}>
       <nav className={classes.nav}>
-        <a href='#home' className={classes.navButton}>HOME</a>
-        <a href='#about' className={classes.navButton}>ABOUT</a>
-        <a href='#portfolio' className={classes.navButton}>PORTFOLIO</a>
-        <a href='#contact' className={classes.navButton}>CONTACT</a>
-        <Button className={classes.navButton} size='sm'>Resume</Button>
+        <a href='#home' className={`${classes.navButton} ${classes.one}`}>HOME</a>
+        <a href='#about' className={`${classes.navButton} ${classes.two}`}>ABOUT</a>
+        <a href='#portfolio' className={`${classes.navButton} ${classes.three}`}>PORTFOLIO</a>
+        <a href='#contact' className={`${classes.navButton} ${classes.four}`}>CONTACT</a>
+        <a href='#resume' className={`${classes.five}`}><Button className={classes.navButton} size='sm'>Resume</Button></a>
       </nav>
     </nav>
   );
