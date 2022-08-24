@@ -69,7 +69,10 @@ const About = () => {
           </div>
         </div>
         <div className={classes.button}>
-          {laptop && <Button size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i></Button>}
+          {laptop &&
+            <Button
+              size='md'>DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i>
+            </Button>}
         </div>
       </div>
     </section>

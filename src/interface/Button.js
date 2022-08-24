@@ -5,7 +5,8 @@ const Button = (props) => {
   return (
     <button
       className={props.size ? props.size : 'primary'}
-      onClick={props.onClick}>{props.children}</button>
+      onClick={props.onClick}>{props.children}
+    </button>
   );
 };
 

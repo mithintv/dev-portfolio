@@ -41,6 +41,11 @@ section {
       width: 35rem;
     }
   }
+
+  .banner a:active {
+    text-decoration: none;
+    color: none;
+  }
 }
 
 @include devices(laptop) {

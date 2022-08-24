@@ -1,19 +1,10 @@
-import Social from "./Social";
 
 import '../sass/interface/SideBar.scss';
 
-const SideBar = () => {
+const SideBar = props => {
   return (
-    <div className='sidebar'>
-      <Social href='https://instagram.com/mithintv'>
-        <i className="fa-brands fa-instagram"></i>
-      </Social>
-      <Social href='https://github.com/mithin888'>
-        <i className="fa-brands fa-github"></i>
-      </Social>
-      <Social href='https://linkedin.com/in/mithintv'>
-        <i className="fa-brands fa-linkedin-in"></i>
-      </Social>
+    <div className={`sidebar ${props.side}`}>
+      {props.children}
     </div>
   );
 };
