@@ -1,5 +1,17 @@
 @import '../variables.scss';
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .section {
   display: flex;
   justify-content: right;
@@ -74,24 +86,28 @@
 
 @include devices(tablet) {
   .section {
-    visibility: hidden;
+    justify-content: center;
+    padding: 2rem 0;
   }
 }
 
 @include devices(mobile) {
   .section {
-    visibility: hidden;
+    justify-content: center;
+    padding: 2rem 0;
   }
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(-3rem);
-  }
+.mobileNav {
+  cursor: pointer;
+  text-decoration: none;
+  color: $button-color-icon;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.mobileNav:hover {
+  color: $button-color-hover;
+}
+
+.mobileNav i {
+  font-size: 2rem;
 }
