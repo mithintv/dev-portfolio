@@ -50,11 +50,8 @@ const Navbar = () => {
   }, []);
 
   document.body.style.overflowY = scrollState ? 'scroll' : 'hidden';
-  const documentWidth = document.documentElement.clientWidth;
-  const windowWidth = window.innerWidth;
-  const scrollBarWidth = windowWidth - documentWidth;
-  document.body.style.marginRight = scrollState ? '0px' : `${17}px`;
 
+  document.body.style.paddingRight = scrollState ? '' : '12px';
   const handleMenu = () => {
     setScrollState(prevState => !prevState);
     setShowMobileNav(prevState => !prevState);

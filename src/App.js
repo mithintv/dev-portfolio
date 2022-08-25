@@ -9,8 +9,7 @@ import Contact from './components/Contact';
 import Social from "./interface/Social";
 
 
-
-function App() {
+const App = () => {
 
   const [home, setHome] = useState(false);
   const [sideBar, setSideBar] = useState(false);
@@ -48,6 +47,6 @@ function App() {
       </SideBar>}
     </React.Fragment>
   );
-}
+};
 
 export default App;
