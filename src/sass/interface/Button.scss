@@ -26,11 +26,18 @@
   font-size: 0.85rem;
 }
 
-.sm {
+.xs {
   @extend .primary;
   font-size: 0.85rem;
   width: 6rem;
   height: 2.25rem;
+  margin: 0 auto;
+}
+
+.sm {
+  @extend .primary;
+  width: 12rem;
+  height: 2.75rem;
   margin: 0 auto;
 }
 

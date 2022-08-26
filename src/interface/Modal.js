@@ -13,11 +13,7 @@ const Backdrop = props => {
 };
 
 const ModalOverlay = props => {
-  return (
-    <div className='modal'>
-      This is a modal
-    </div>
-  );
+  return <div className='modal'>{props.elements}</div>;
 };
 
 const Modal = props => {
@@ -28,7 +24,7 @@ const Modal = props => {
         <Backdrop onClick={props.onBackdrop} />,
         document.getElementById('backdrop-root'))}
       {ReactDOM.createPortal(
-        <ModalOverlay />,
+        <ModalOverlay elements={props.children} />,
         document.getElementById('overlay-root'))}
     </React.Fragment>
   );

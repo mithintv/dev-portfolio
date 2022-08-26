@@ -1,5 +1,15 @@
 @import '../variables.scss';
 
+@keyframes drawer-in {
+  from {
+    transform: translateY(-20rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -12,11 +22,11 @@
 }
 
 .modal {
-  background-color: white;
+  background-color: $background-color-l1;
   position: fixed;
-  top: 30vh;
-  left: 10%;
-  width: 80%;
+  top: 0;
+  width: 100%;
   z-index: 3;
-  overflow: hidden;
+  box-shadow: 0px 5px 10px #dadada;
+  animation: drawer-in 0.5s ease;
 }
