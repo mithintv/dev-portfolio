@@ -4,6 +4,7 @@ const Button = (props) => {
 
   return (
     <button
+      type={props.type ? props.type : 'submit'}
       className={props.size ? props.size : 'primary'}
       onClick={props.onClick}>{props.children}
     </button>

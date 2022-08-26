@@ -11,6 +11,7 @@
   text-decoration: none;
   padding: 0;
   border: none;
+  width: 100%;
 }
 
 .card:hover {
@@ -24,10 +25,12 @@
 }
 
 .card-content {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1.25rem 1rem;
   height: max-content;
+  width: 100%;
 
   .card-header {
     display: flex;
@@ -53,6 +56,10 @@
     .card-icons>a:hover {
       color: $button-color-hover;
     }
+  }
+
+  .card-content p {
+    width: 100%;
   }
 
   .tech {

@@ -5,19 +5,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  .intro {
-    p {
-      padding-top: 0.5rem;
-      margin-right: 3rem;
-    }
-
-    .social {
-      display: flex;
-      flex-direction: row;
-      padding-left: 1rem;
-    }
-  }
+  margin-bottom: 6rem;
 
   .form {
     display: flex;
@@ -56,10 +44,24 @@
       padding: 0.5rem 0.5rem;
       margin-bottom: 0;
       width: 100%;
-      min-height: 12rem;
+      min-height: 8rem;
       max-height: 20rem;
     }
   }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 6rem 3rem;
+}
+
+.intro p {
+  font-size: 0.95rem;
+  line-height: 1.25rem;
+  margin: 0 0 4rem 0;
 }
 
 @include devices(tablet) {
