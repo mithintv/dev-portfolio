@@ -1,4 +1,4 @@
-import classes from '../sass/modules/Portfolio.module.scss';
+import classes from './Portfolio.module.scss';
 
 import Header from '../interface/Header';
 import Card from '../interface/Card';

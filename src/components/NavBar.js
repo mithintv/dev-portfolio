@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import classes from "../sass/modules/NavBar.module.scss";
+import classes from "./NavBar.module.scss";
 
 import Button from '../interface/Button';
 import Modal from '../interface/Modal';

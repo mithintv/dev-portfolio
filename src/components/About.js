@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Button from '../interface/Button';
 import Header from '../interface/Header';
-import classes from '../sass/modules/About.module.scss';
+import classes from './About.module.scss';
 
 const About = () => {
 

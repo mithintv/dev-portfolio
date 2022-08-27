@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import '../sass/interface/Modal.scss';
+import './Modal.scss';
 
 const Backdrop = props => {
   return (

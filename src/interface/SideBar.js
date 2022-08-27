@@ -1,5 +1,5 @@
 
-import '../sass/interface/SideBar.scss';
+import './SideBar.scss';
 
 const SideBar = props => {
   return (

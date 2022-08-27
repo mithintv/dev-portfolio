@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from '../interface/Button';
 
-import classes from '../sass/modules/Home.module.scss';
+import classes from './Home.module.scss';
 
 const Header = () => {
 

@@ -1,4 +1,4 @@
-import '../sass/interface/Card.scss';
+import './Card.scss';
 
 const Card = props => {
 

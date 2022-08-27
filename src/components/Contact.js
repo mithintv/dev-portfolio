@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useReducer } from "react";
 import Header from "../interface/Header";
 import Button from '../interface/Button';
 
-import classes from "../sass/modules/Contact.module.scss";
+import classes from "./Contact.module.scss";
 
 import emailjs from '@emailjs/browser';
 

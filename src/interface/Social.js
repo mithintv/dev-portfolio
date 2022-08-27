@@ -1,4 +1,4 @@
-import "../sass/interface/Social.scss";
+import "./Social.scss";
 
 const Social = props => {
 
