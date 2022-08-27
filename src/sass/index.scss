@@ -82,6 +82,9 @@ span {
 input,
 textarea {
   font-family: $font;
+  color: $input-color;
+  font-weight: 400;
+  font-size: 0.75rem;
 }
 
 input:focus-visible,

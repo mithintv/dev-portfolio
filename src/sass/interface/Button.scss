@@ -21,6 +21,11 @@
   cursor: pointer;
 }
 
+.primary:disabled {
+  background-color: $button-color-disabled;
+  cursor: default;
+}
+
 .primary i {
   padding-left: 0.75rem;
   font-size: 0.85rem;
