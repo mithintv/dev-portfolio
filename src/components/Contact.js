@@ -10,25 +10,64 @@ import emailjs from '@emailjs/browser';
 const contactReducer = (state, action) => {
   switch (action.type) {
     case 'blur':
-      return {
-        ...state,
-        [action.input.name]: {
-          ...state[action.input.name],
-          touched: action.input.touched,
-          valid: action.input.valid,
-          showError: action.input.touched && !action.input.valid
-        }
-      };
+      if (action.input.name === 'email') {
+        return {
+          ...state,
+          email: {
+            value: action.input.value,
+            touched: action.input.touched,
+            valid: action.input.valid,
+            showError: action.input.touched && !action.input.valid,
+            firstBlur: true
+          }
+        };
+      } else {
+        return {
+          ...state,
+          [action.input.name]: {
+            ...state[action.input.name],
+            touched: action.input.touched,
+            valid: action.input.valid,
+            showError: action.input.touched && !action.input.valid
+          }
+        };
+      }
     case 'change':
-      return {
-        ...state,
-        [action.input.name]: {
-          value: action.input.value,
-          touched: action.input.touched,
-          valid: action.input.valid,
-          showError: action.input.touched && !action.input.valid
+      if (action.input.name === 'email') {
+        if (state.email.firstBlur) {
+          return {
+            ...state,
+            email: {
+              value: action.input.value,
+              touched: action.input.touched,
+              valid: action.input.valid,
+              showError: action.input.touched && !action.input.valid,
+              firstBlur: state.email.firstBlur
+            }
+          };
+        } else {
+          return {
+            ...state,
+            email: {
+              value: action.input.value,
+              touched: action.input.touched,
+              valid: action.input.valid,
+              showError: false,
+              firstBlur: state.email.firstBlur
+            }
+          };
         }
-      };
+      } else {
+        return {
+          ...state,
+          [action.input.name]: {
+            value: action.input.value,
+            touched: action.input.touched,
+            valid: action.input.valid,
+            showError: action.input.touched && !action.input.valid
+          }
+        };
+      }
     case 'submit':
       return {
         ...state,
@@ -46,7 +85,7 @@ const contactReducer = (state, action) => {
           ...state.message,
           touched: true,
           showError: true && !state.message.valid
-        },
+        }
       };
     default:
       return state;
@@ -55,8 +94,9 @@ const contactReducer = (state, action) => {
 
 const Contact = () => {
   const [submit, setSubmit] = useState(false);
+  const [formValid, setFormValid] = useState(false);
   const [buttonValid, setButtonValid] = useState(true);
-  const [valid, dispatchValid] = useReducer(contactReducer, {
+  const initialState = {
     name: {
       value: '',
       touched: false,
@@ -67,7 +107,8 @@ const Contact = () => {
       value: '',
       touched: false,
       valid: false,
-      showError: false
+      showError: false,
+      firstBlur: false,
     },
     message: {
       value: '',
@@ -75,17 +116,29 @@ const Contact = () => {
       valid: false,
       showError: false
     }
-  });
+  };
+  const [valid, dispatchValid] = useReducer(contactReducer, initialState);
   const formRef = useRef();
   const nameRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
 
-  // useEffect(() => {
-  //   setFormValid(prevState => {
-  //     return valid.name.valid && valid.email.valid && valid.message.valid;
-  //   });
-  // }, [valid.name.valid, valid.email.valid, valid.message.valid]);
+  // componentDidUpdate() function will run at mount and with every update to dependencies
+  useEffect(() => {
+    setFormValid(prevState => {
+      return valid.name.valid && valid.email.valid && valid.message.valid;
+    });
+    if (valid.name.touched && valid.email.touched && valid.message.touched) {
+      setButtonValid(prevState => {
+        return valid.name.valid && valid.email.valid && valid.message.valid;
+      });
+    }
+  }, [valid.name.valid, valid.email.valid, valid.message.valid, valid.name.touched, valid.email.touched, valid.message.touched]);
+
+  // componentDidMount() function will run only at mount
+  useEffect(() => {
+    setButtonValid(true);
+  }, []);
 
   const isValid = (inputRef) => {
     if (inputRef.current.name === 'email') {
@@ -119,29 +172,13 @@ const Contact = () => {
           valid: isValid(inputRef)
         }
       });
-    if (formIsValid) {
-      setButtonValid(prevState => true);
-    }
-    else setButtonValid(prevState => false);
   };
-
-  let formIsValid = false;
-  if (valid.name.valid && valid.email.valid && valid.message.valid) {
-    formIsValid = true;
-  }
 
   const submitHandler = event => {
     event.preventDefault();
-    if (!formIsValid) {
+    if (!formValid) {
       setButtonValid(false);
-      dispatchValid(
-        {
-          type: 'submit',
-          input: {
-            name: 'button',
-            touched: true,
-          }
-        });
+      dispatchValid({ type: 'submit' });
       return;
     } else {
       // emailjs.sendForm('service_72mo8y7', 'contact_form', formRef.current, '-YTmwUFLJVqxXgeZh')
@@ -152,7 +189,7 @@ const Contact = () => {
       //   });
     }
     setSubmit(true);
-    formIsValid = false;
+    setFormValid(false);
   };
 
   const sendAnotherHandler = () => {
