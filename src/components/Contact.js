@@ -8,9 +8,33 @@ import classes from "./Contact.module.scss";
 import emailjs from '@emailjs/browser';
 
 const contactReducer = (state, action) => {
-  switch (action.type) {
-    case 'blur':
-      if (action.input.name === 'email') {
+  if (action.type === 'blur') {
+    if (action.input.name === 'email') {
+      return {
+        ...state,
+        [action.input.name]: {
+          ...state[action.input.name],
+          touched: action.input.touched,
+          valid: action.input.valid,
+          showError: action.input.touched && !action.input.valid,
+          firstBlur: true
+        }
+      };
+    } else {
+      return {
+        ...state,
+        [action.input.name]: {
+          ...state[action.input.name],
+          touched: action.input.touched,
+          valid: action.input.valid,
+          showError: action.input.touched && !action.input.valid
+        }
+      };
+    }
+  }
+  if (action.type === 'change') {
+    if (action.input.name === 'email') {
+      if (state.email.firstBlur) {
         return {
           ...state,
           email: {
@@ -18,77 +42,52 @@ const contactReducer = (state, action) => {
             touched: action.input.touched,
             valid: action.input.valid,
             showError: action.input.touched && !action.input.valid,
-            firstBlur: true
+            firstBlur: state.email.firstBlur
           }
         };
       } else {
         return {
           ...state,
-          [action.input.name]: {
-            ...state[action.input.name],
-            touched: action.input.touched,
-            valid: action.input.valid,
-            showError: action.input.touched && !action.input.valid
-          }
-        };
-      }
-    case 'change':
-      if (action.input.name === 'email') {
-        if (state.email.firstBlur) {
-          return {
-            ...state,
-            email: {
-              value: action.input.value,
-              touched: action.input.touched,
-              valid: action.input.valid,
-              showError: action.input.touched && !action.input.valid,
-              firstBlur: state.email.firstBlur
-            }
-          };
-        } else {
-          return {
-            ...state,
-            email: {
-              value: action.input.value,
-              touched: action.input.touched,
-              valid: action.input.valid,
-              showError: false,
-              firstBlur: state.email.firstBlur
-            }
-          };
-        }
-      } else {
-        return {
-          ...state,
-          [action.input.name]: {
+          email: {
             value: action.input.value,
             touched: action.input.touched,
             valid: action.input.valid,
-            showError: action.input.touched && !action.input.valid
+            showError: false,
+            firstBlur: state.email.firstBlur
           }
         };
       }
-    case 'submit':
+    } else {
       return {
         ...state,
-        name: {
-          ...state.name,
-          touched: true,
-          showError: true && !state.name.valid
-        },
-        email: {
-          ...state.email,
-          touched: true,
-          showError: true && !state.email.valid
-        },
-        message: {
-          ...state.message,
-          touched: true,
-          showError: true && !state.message.valid
+        [action.input.name]: {
+          value: action.input.value,
+          touched: action.input.touched,
+          valid: action.input.valid,
+          showError: action.input.touched && !action.input.valid
         }
       };
-    default:
-      return state;
+    }
+  }
+  if (action.type === 'submit') {
+    return {
+      ...state,
+      name: {
+        ...state.name,
+        touched: true,
+        showError: true && !state.name.valid
+      },
+      email: {
+        ...state.email,
+        touched: true,
+        showError: true && !state.email.valid
+      },
+      message: {
+        ...state.message,
+        touched: true,
+        showError: true && !state.message.valid
+      }
+    };
   }
 };
 
@@ -145,8 +144,7 @@ const Contact = () => {
       const isNotEmpty = inputRef.current.value.trim() !== '';
       const emailValid = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(inputRef.current.value);
       return isNotEmpty && emailValid;
-    }
-    return inputRef.current.value.trim() !== '';
+    } else return inputRef.current.value.trim() !== '';
   };
 
   const handleBlur = (inputRef, event) => {
