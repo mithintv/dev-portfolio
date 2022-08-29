@@ -9,19 +9,29 @@ const About = () => {
   const [tablet, setTablet] = useState(false);
   const [laptop, setLaptop] = useState(false);
 
+  const handleResize = () => {
+    if (window.innerWidth <= 1024) {
+      setLaptop(true);
+    }
+    else if (window.innerWidth <= 768) {
+      setTablet(true);
+    }
+    else {
+      setLaptop(false);
+      setTablet(false);
+    }
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setTablet(true);
-      } else setTablet(false);
-      if (window.innerWidth <= 1024 && window.innerWidth >= 768) {
-        setLaptop(true);
-      } else setLaptop(false);
-
-    };
     window.addEventListener('resize', handleResize);
-
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
+  useEffect(() => {
+    handleResize();
+  });
 
   return (
     <section id='about'>
