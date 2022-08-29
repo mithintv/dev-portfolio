@@ -1,0 +1,104 @@
+@import '../index.scss';
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  animation: appear 1s ease;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.inputWrapper input {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 1.75rem;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 0 0 0.2rem 0.5rem;
+}
+
+.formMessage textarea {
+  resize: vertical;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0;
+  width: 100%;
+  min-height: 8rem;
+  max-height: 20rem;
+}
+
+.form p {
+  margin: 0.25rem 0 0 0;
+  padding: 0.25rem 0 0 0.5rem;
+  visibility: hidden;
+  color: rgb(255, 130, 130);
+}
+
+p.error {
+  visibility: visible;
+}
+
+.formHide {
+  @extend .form;
+  opacity: 0;
+  z-index: 0;
+}
+
+@include devices(tablet) {
+  .form {
+    margin-top: 2.5rem;
+    width: 85%;
+  }
+}
+
+@include devices(mobile) {
+  .form {
+    margin-top: 2rem;
+    width: 85%;
+  }
+
+  .formHeader {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .inputWrapper {
+    width: 100%;
+  }
+
+  .inputWrapper input {
+    box-sizing: border-box;
+    margin: 1rem 0 0;
+    width: 100%;
+  }
+}

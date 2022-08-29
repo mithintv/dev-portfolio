@@ -14,34 +14,40 @@ const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [scrollState, setScrollState] = useState(true);
 
-  const handleScroll = () => {
-    if (!window.innerWidth < 768) {
-      if (scroll < 100) {
-        setTop(true);
-      }
-      else if (scroll < window.scrollY) {
-        setShowNav(false);
-        setTop(false);
-      } else {
-        setShowNav(true);
-        setTop(false);
-      }
-      setScroll(window.scrollY);
-    }
-  };
-
   const handleResize = () => {
     if (window.innerWidth <= 768) {
       setMobile(true);
     } else setMobile(false);
   };
 
+  const handleScroll = () => {
+    if (scroll < 100) {
+      setTop(true);
+    }
+    else if (scroll < window.scrollY) {
+      setShowNav(false);
+      setTop(false);
+    } else {
+      setShowNav(true);
+      setTop(false);
+    }
+    setScroll(window.scrollY);
+  };
+
+  const handleMouse = (event) => {
+    if (event.clientY <= 200) {
+      setShowNav(true);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouse);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouse);
     };
   });
 
