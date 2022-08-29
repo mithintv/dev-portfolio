@@ -79,7 +79,7 @@ const Navbar = () => {
       <a href='#about' className={`${classes.navButton} ${classes.two}`}>ABOUT</a>
       <a href='#portfolio' className={`${classes.navButton} ${classes.three}`}>PORTFOLIO</a>
       <a href='#contact' className={`${classes.navButton} ${classes.four}`}>CONTACT</a>
-      <a href='#resume' className={`${classes.five}`}><Button className={classes.navButton} size='xs'>RESUME</Button></a>
+      <a target="_blank" rel="noreferrer" href='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/resumes%2FMithinGThomasResume2022.pdf?alt=media&token=043282c5-7201-41d9-a621-bb073ec17741' className={`${classes.five}`}><Button className={classes.navButton} size='xs'>RESUME</Button></a>
     </nav>;
 
   return (

@@ -35,7 +35,7 @@ const App = () => {
           <Social href='https://instagram.com/mithintv'>
             <i className="fa-brands fa-instagram"></i>
           </Social>
-          <Social href='https://github.com/mithin888'>
+          <Social href='https://github.com/mithintv'>
             <i className="fa-brands fa-github"></i>
           </Social>
           <Social href='https://linkedin.com/in/mithintv'>
