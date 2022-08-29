@@ -4,6 +4,8 @@ import Button from './Button';
 
 import "./Form.scss";
 
+import emailjs from '@emailjs/browser';
+
 const initialState = {
   name: {
     value: '',
@@ -142,12 +144,12 @@ const Form = props => {
       return;
     } else {
 
-      // emailjs.sendForm('service_72mo8y7', 'contact_form', formRef.current, '-YTmwUFLJVqxXgeZh')
-      //   .then((result) => {
-      //     console.log(result.text);
-      //   }, (error) => {
-      //     console.log(error.text);
-      //   });
+      emailjs.sendForm('service_72mo8y7', 'contact_form', formRef.current, '-YTmwUFLJVqxXgeZh')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
       props.onSubmit();
     }
   };

@@ -5,7 +5,6 @@ import Header from '../interface/Header';
 import classes from './About.module.scss';
 
 const About = () => {
-
   const [tablet, setTablet] = useState(false);
   const [laptop, setLaptop] = useState(false);
 
@@ -86,7 +85,6 @@ const About = () => {
         </div>
       </div>
     </section>
-
   );
 };
 

@@ -8,6 +8,7 @@
 
   .button {
     margin: 0 auto;
+    animation: appear 1.5s ease;
   }
 
   .body {
@@ -24,6 +25,7 @@
       .text {
         margin: 0.25rem 0;
         text-align: justify;
+        animation: appear 1s ease;
       }
 
       .text>a {
@@ -36,11 +38,16 @@
       }
     }
 
+    .background h3 {
+      animation: appear 0.75s ease;
+    }
+
     .skills {
       display: flex;
       flex-direction: column;
       padding: 0 1rem;
       width: 50%;
+      animation: appear 1s ease;
 
       .tech {
         display: flex;
@@ -55,7 +62,12 @@
       .tech>p {
         margin: 0 0 0.25rem 0;
         width: 4rem;
+        animation: appear 1.5s ease;
       }
+    }
+
+    .skills>h3 {
+      animation: appear 1.25s ease;
     }
   }
 }

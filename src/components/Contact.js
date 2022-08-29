@@ -6,10 +6,6 @@ import Form from "../interface/Form";
 
 import classes from "./Contact.module.scss";
 
-import emailjs from '@emailjs/browser';
-
-
-
 const Contact = () => {
   const [submit, setSubmit] = useState(false);
   const [hideForm, setHideForm] = useState(false);
@@ -35,7 +31,6 @@ const Contact = () => {
         <p>Thank you for your sending a message! I really appreciate that you took the time to peruse my website and reach out. I will get back to you via email as soon as possible. Cheers!</p>
         <Button size='md' onClick={sendAnotherHandler}>SEND ANOTHER MESSAGE</Button>
       </div>}
-
     </div>;
 
   return (
