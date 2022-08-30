@@ -75,6 +75,7 @@
   @extend .section;
   transform: translateY(0px);
   box-shadow: 0px 5px 10px #dadada;
+  z-index: 4;
 }
 
 .top {
@@ -108,7 +109,6 @@
   cursor: pointer;
   text-decoration: none;
   color: $button-color-icon;
-  z-index: 4;
 }
 
 .mobileNavOpener:hover,

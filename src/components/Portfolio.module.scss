@@ -6,16 +6,19 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px 14px;
+  margin: $body-margin;
 }
 
 @include devices (tablet) {
   .content {
+    margin: $body-margin-xs;
     margin-top: 2rem;
   }
 }
 
 @include devices (mobile) {
   .content {
+    margin: $body-margin-xxxs;
     margin-top: 2rem;
   }
 }

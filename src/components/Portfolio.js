@@ -11,7 +11,7 @@ const Portfolio = () => {
     <section id='portfolio'>
       <div>
         <Header>PORTFOLIO</Header>
-        <div className={classes.content}>
+        <ul className={classes.content}>
           <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fwordle-tracker-screen.png?alt=media&token=008c0cc0-0b22-4fce-825f-0eab63d487f4'
             title='Wordle Leaderboard'
@@ -59,7 +59,7 @@ const Portfolio = () => {
             git='https://github.com/mithintv/simon-game'
             link='https://mithintv.github.io/simon-game/'
           />
-        </div>
+        </ul>
       </div>
     </section>
   );
