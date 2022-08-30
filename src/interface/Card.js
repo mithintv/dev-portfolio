@@ -3,15 +3,14 @@ import './Card.scss';
 const Card = props => {
 
   return (
-    <li
-      className='card'>
+    <li className='card'>
       <img alt='project' src={props.img} />
       <div className='card-content'>
         <div className='card-header'>
           <a className='card-click'
             rel="noreferrer"
             target="_blank"
-            href={props.link}> <h4>{props.title}</h4></a>
+            href={props.link || props.git}> <h4>{props.title}</h4></a>
           <div className='card-icons'>
             <a
               rel="noreferrer"
@@ -32,7 +31,8 @@ const Card = props => {
           })}
         </div>
       </div>
-    </li >);
+    </li>
+  );
 };
 
 export default Card;

@@ -17,7 +17,11 @@ const Navbar = () => {
   const handleResize = () => {
     if (window.innerWidth <= 768) {
       setMobile(true);
-    } else setMobile(false);
+    } else {
+      setMobile(false);
+      setShowMobileNav(false);
+      setScrollState(true);
+    };
   };
 
   const handleScroll = () => {
@@ -88,8 +92,7 @@ const Navbar = () => {
             <a onClick={handleMenu} href='#home' className={`${classes.mobileNavLink} ${classes.one}`}>HOME</a>
             <a onClick={handleMenu} href='#about' className={`${classes.mobileNavLink} ${classes.two}`}>ABOUT</a>
             <a onClick={handleMenu} href='#portfolio' className={`${classes.mobileNavLink} ${classes.three}`}>PORTFOLIO</a>
-            <a onClick={handleMenu} href='#contact' className={`${classes.mobileNavLink} ${classes.four}`}>CONTACT</a>
-            <a onClick={handleMenu} href='#resume' className={`${classes.mobileNavButton} ${classes.five}`}><Button size='sm'>RESUME</Button></a>
+            <a onClick={handleMenu} href='#contact' className={`${classes.mobileNavLink} ${classes.mobileNavButton} ${classes.four}`}>CONTACT</a>
           </nav>
         </Modal>
       }

@@ -18,12 +18,13 @@ const Portfolio = () => {
             description='A slackbot that keeps track of daily Wordle scores hooked to a frontend that sorts players in a leaderboard with additional stats.'
             tech={['React', 'Bulma', 'Node', 'Express', 'MongoDB', 'Slack API', 'Heroku']}
             git='https://github.com/mithintv/wordle-tracker'
+            link='https://wordle-tracker-client.herokuapp.com'
           />
           <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fportfolio-screen.png?alt=media&token=1e56e6d4-b07a-46a4-8359-e5ad66b29189'
             title='Portfolio'
-            description='The latest iteration of my portfolio. This is a single-page built with React, CSS3/Sass and Firebase.'
-            tech={['React', 'CSS3/Sass', 'Firebase']}
+            description='The latest iteration of my portfolio. This is a single-page built with React, CSS3/Sass and Firebase hosted on Netlify.'
+            tech={['React', 'CSS3/Sass', 'Firebase', 'Netlify']}
             git='https://github.com/mithintv/portfolio-react'
             link='https://portfolio-react-2022-v1.netlify.app/'
           />

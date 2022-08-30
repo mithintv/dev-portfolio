@@ -61,7 +61,8 @@
       margin: 0 0.33rem;
       text-decoration: none;
       color: $heading-font-color-l2;
-      transition: transform 0.25s ease
+      transition: transform 0.25s ease;
+      z-index: 2;
     }
 
     .card-icons a:hover {
