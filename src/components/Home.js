@@ -15,10 +15,12 @@ const Header = () => {
             <h3 className={classes.bannerLead}>HELLO, MY NAME IS</h3>
             <h1 className={classes.bannerTitle}>MITHIN THOMAS</h1>
             <blockquote className={classes.bannerQuote}>"We have become accustomed to understanding the social world in terms of “forces,” “pressures,” “processes,” and “developments” often forgetting that these terms are the statistical summaries of the deeds of millions of individual men and women who act on their beliefs in pursuit of their desires."<span> - Steven Pinker,</span> <em>The Sense of Style: The Thinking Person's Guide to Writing in the 21st Century</em></blockquote>
-            <a href='#portfolio'>
-              <Button>MY WORK <i className="fa-solid fa-briefcase"></i>
-              </Button>
-            </a>
+            <div className={classes.buttonWrapper}>
+              <a href='#portfolio'>
+                <Button>MY WORK <i className="fa-solid fa-briefcase"></i>
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

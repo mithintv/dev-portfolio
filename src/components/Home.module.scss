@@ -1,67 +1,54 @@
 @import '../index.scss';
 
-section {
-  display: flex;
-}
 
-.home {
+
+.banner {
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  height: 32.5rem;
+  justify-content: center;
+}
 
-  .banner {
-    display: flex;
-    flex-direction: column;
-    height: 32.5rem;
-    justify-content: center;
+.bannerLead {
+  line-height: 0.5rem;
+  margin: 0.25rem 0 0.25rem 0;
+  color: #919191;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.15rem;
+  animation: appear 0.5s ease;
+}
 
-    .bannerLead {
-      line-height: 0.5rem;
-      margin: 0.25rem 0 0.25rem 0;
-      color: #919191;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: 0.15rem;
-      animation: appear 0.5s ease;
-    }
+.bannerTitle {
+  line-height: 1rem;
+  margin: 1rem 0 1rem 0;
+  color: #393939;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  animation: appear 1s ease;
+}
 
-    .bannerTitle {
-      line-height: 1rem;
-      margin: 1rem 0 1rem 0;
-      color: #393939;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 2.5rem;
-      animation: appear 1s ease;
-    }
+.bannerQuote {
+  margin: 0.5rem 0 0rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  width: 35rem;
+  animation: appear 1.5s ease;
+}
 
-    .bannerQuote {
-      margin: 0.5rem 0 0rem 0;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 300;
-      font-size: 0.85rem;
-      width: 35rem;
-      animation: appear 1.5s ease;
-    }
+.bannerQuote span {
+  font-weight: 400;
+  animation: appear 1.5s ease;
+}
 
-    .bannerQuote span {
-      font-weight: 400;
-      animation: appear 1.5s ease;
-    }
+.bannerQuote em {
+  font-weight: 200;
+  animation: appear 1.5s ease;
+}
 
-    .bannerQuote em {
-      font-weight: 200;
-      animation: appear 1.5s ease;
-    }
-  }
-
-  .banner a {
-    animation: appear 2s ease;
-  }
-
-  .banner a:active {
-    text-decoration: none;
-    color: none;
-  }
+.buttonWrapper a {
+  animation: appear 2s ease;
 }
 
 @include devices(laptop) {

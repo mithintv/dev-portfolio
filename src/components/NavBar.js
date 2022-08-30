@@ -34,20 +34,12 @@ const Navbar = () => {
     setScroll(window.scrollY);
   };
 
-  const handleMouse = (event) => {
-    if (event.clientY <= 200) {
-      setShowNav(true);
-    }
-  };
-
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouse);
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouse);
     };
   });
 
@@ -79,7 +71,7 @@ const Navbar = () => {
       <a href='#about' className={`${classes.navButton} ${classes.two}`}>ABOUT</a>
       <a href='#portfolio' className={`${classes.navButton} ${classes.three}`}>PORTFOLIO</a>
       <a href='#contact' className={`${classes.navButton} ${classes.four}`}>CONTACT</a>
-      <a target="_blank" rel="noreferrer" href='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/resumes%2FMithinGThomasResume2022.pdf?alt=media&token=043282c5-7201-41d9-a621-bb073ec17741' className={`${classes.five}`}><Button className={classes.navButton} size='xs'>RESUME</Button></a>
+      <a target="_blank" rel="noreferrer" href='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/resumes%2FMithinGThomasResume2022.pdf?alt=media&token=043282c5-7201-41d9-a621-bb073ec17741' className={`${classes.navButton} ${classes.five}`}><Button size='xs'>RESUME</Button></a>
     </nav>;
 
   return (

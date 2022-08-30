@@ -2,7 +2,7 @@
 
 // SCSS Variables
 $heading-font: 'Poppins', sans-serif;
-$font: 'Poppins', sans-serif;
+$font: 'Raleway', sans-serif;
 $heading-font-color-l1: #919191;
 $heading-font-color-l2: #494949;
 $nav-font-color: #777777;
@@ -119,10 +119,12 @@ h6 {
 }
 
 h3 {
-  margin: 1rem 0 0.75rem 0;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem 0;
 }
 
 h4 {
+  font-size: 1.25rem;
   margin: 0.5rem 0 0.5rem 0;
 }
 
@@ -130,7 +132,8 @@ p {
   color: $p-color;
   margin-top: 0;
   line-height: 1.1rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   font-family: $font;
 }
 
@@ -139,7 +142,9 @@ a {
 }
 
 span {
+  font-size: 1rem;
   font-family: $font;
+  font-weight: 600;
 }
 
 input,
