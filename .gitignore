@@ -2,6 +2,7 @@
 
 # assets
 /src/images
+/tickets
 
 # dependencies
 /node_modules
