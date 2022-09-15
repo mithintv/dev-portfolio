@@ -34,6 +34,7 @@ const Portfolio = () => {
             description='A front-end proof of concept with a dynamic cart for a hypothetical food ordering app built with React and Firebase.'
             tech={['React', 'CSS3', 'Firebase', 'Netlify']}
             git='https://github.com/mithintv/food-order-app'
+            link='https://github.com/mithintv/food-order-app'
           />
           <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fkeeper-app-screen.png?alt=media&token=03f8b193-b2b2-4997-aba0-ed62ca110426'
