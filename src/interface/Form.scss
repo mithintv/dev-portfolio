@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import "../index.scss";
 
 @keyframes appear {
   from {
@@ -65,6 +65,10 @@
 
 p.error {
   visibility: visible;
+}
+
+p.hideError {
+  display: none;
 }
 
 .formHide {

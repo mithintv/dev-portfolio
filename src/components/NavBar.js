@@ -57,7 +57,6 @@ const Navbar = () => {
   };
 
   document.body.style.overflowY = scrollState ? 'scroll' : 'hidden';
-  document.body.style.paddingRight = scrollState ? '' : '12px';
 
 
   const mobileNav = showMobileNav ? '' :
