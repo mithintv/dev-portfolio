@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import './Modal.scss';
@@ -13,7 +13,17 @@ const Backdrop = props => {
 };
 
 const ModalOverlay = props => {
-  return <div className={props.open ? 'modalOpen' : 'modalClose'}>
+
+  // state for ham menu: onload, modalOpen, modalClose
+  const [modalClass, setModalClass] = useState('appear');
+
+
+  useEffect(() => {
+    if (props.clicked && props.open) setModalClass('modalOpen');
+    else if (props.clicked && !props.open) setModalClass('modalClose');
+  }, [props.clicked, props.open]);
+
+  return <div className={modalClass}>
     {props.elements}
   </div>;
 };
@@ -24,12 +34,13 @@ const Modal = props => {
     <React.Fragment>
       {ReactDOM.createPortal(
         <Backdrop
-          blur={props.onShow}
+          blur={props.onClick}
           onClick={props.onBackdrop} />,
         document.getElementById('backdrop-root'))}
       {ReactDOM.createPortal(
         <ModalOverlay
-          open={props.onShow}
+          clicked={props.onLoad}
+          open={props.onClick}
           elements={props.children} />,
         document.getElementById('overlay-root'))}
     </React.Fragment>

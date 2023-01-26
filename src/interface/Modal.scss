@@ -2,7 +2,7 @@
 
 @keyframes drawerIn {
   from {
-    transform: translateY(-30rem);
+    transform: translateY(-25rem);
   }
 
   to {
@@ -12,7 +12,7 @@
 
 @keyframes drawerOut {
   from {
-    transform: translateY(30rem);
+    transform: translateY(25rem);
   }
 
   to {
@@ -41,6 +41,15 @@
   to {
     opacity: 0;
     backdrop-filter: blur(0px);
+  }
+}
+
+@keyframes AppearIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -74,6 +83,12 @@
 
 .modalClose {
   @extend .modalOpen;
-  top: -30rem;
+  top: -25.2rem;
   animation: drawerOut 0.5s ease;
+}
+
+.appear {
+  @extend .modalOpen;
+  top: -25.2rem;
+  animation: AppearIn 1s ease;
 }

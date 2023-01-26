@@ -14,14 +14,17 @@ const App = () => {
   const [home, setHome] = useState(false);
   const [sideBar, setSideBar] = useState(false);
 
+
   useEffect(() => {
     setTimeout(() => {
       setHome(true);
-    }, 1000);
+    }, 750);
     setTimeout(() => {
       setSideBar(true);
-    }, 2000);
+    }, 1500);
   }, []);
+
+
 
   return (
     <React.Fragment>
