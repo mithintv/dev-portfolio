@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import "../index.scss";
 
 @keyframes appear {
   from {
@@ -71,18 +71,6 @@
   color: $nav-font-color-hover;
 }
 
-.show {
-  @extend .section;
-  transform: translateY(0px);
-  box-shadow: 0px 5px 10px #dadada;
-  z-index: 4;
-}
-
-.top {
-  @extend .show;
-  box-shadow: 0px 0px 0px #dadada;
-}
-
 @include devices(tablet) {
   .section {
     justify-content: center;
@@ -97,6 +85,19 @@
   }
 }
 
+.show {
+  @extend .section;
+  padding: 2rem 0 2rem;
+  transform: translateY(0px);
+  box-shadow: 0px 5px 10px #dadada;
+  z-index: 3;
+}
+
+.top {
+  @extend .show;
+  box-shadow: 0px 0px 0px #dadada;
+}
+
 .mobileNav {
   display: flex;
   flex-direction: column;
@@ -104,36 +105,27 @@
   justify-content: center;
 }
 
-.mobileNavOpener,
-.mobileNavCloser {
+.mobileNavHam {
   cursor: pointer;
   text-decoration: none;
   color: $button-color-icon;
 }
 
-.mobileNavOpener:hover,
-.mobileNavCloser:hover {
+.mobileNavHam:hover {
   color: $button-color-hover;
 }
 
-.mobileNavOpener i,
-.mobileNavCloser i {
+.mobileNavHam i {
   font-size: 2rem;
-}
-
-.mobileNavCloser i {
-  margin: 2rem 0 1rem;
-  padding-right: 12px;
 }
 
 .mobileNavLink,
 .mobileNavButton {
   font-size: 1.5rem;
   margin: 2rem 0;
-  padding-right: 12px;
 }
 
 .mobileNavButton {
   text-decoration: none;
-  margin: 1.25rem 0 3rem;
+  margin: 2rem 0 3.5rem;
 }
