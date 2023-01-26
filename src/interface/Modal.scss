@@ -1,8 +1,8 @@
 @import "../index.scss";
 
-@keyframes drawer-in {
+@keyframes drawerIn {
   from {
-    transform: translateY(-20rem);
+    transform: translateY(-30rem);
   }
 
   to {
@@ -12,11 +12,11 @@
 
 @keyframes drawerOut {
   from {
-    transform: translateY(0);
+    transform: translateY(30rem);
   }
 
   to {
-    transform: translateY(-20rem);
+    transform: translateY(0);
   }
 }
 
@@ -44,7 +44,7 @@
   }
 }
 
-.backdrop {
+.backdropBlur {
   position: fixed;
   top: 0;
   left: 0;
@@ -56,16 +56,24 @@
   animation: blurIn 0.5s;
 }
 
-.modal {
+.backdropUnblur {
+  @extend .backdropBlur;
+  backdrop-filter: blur(0px);
+  animation: blurOut 0.5s;
+}
+
+.modalOpen {
   background-color: $background-color-l1;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 0px 5px 10px #dadada;
-  animation: drawer-in 0.5s ease;
+  animation: drawerIn 0.5s ease;
 }
 
 .modalClose {
+  @extend .modalOpen;
+  top: -30rem;
   animation: drawerOut 0.5s ease;
 }

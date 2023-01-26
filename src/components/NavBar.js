@@ -79,22 +79,21 @@ const Navbar = () => {
 
   return (
     <React.Fragment>
-      {showMobileNav &&
-        <Modal
-          onBackdrop={handleMenu}>
-          <nav className={classes.mobileNav}>
-            <a
-              href='#mobileNav'
-              onClick={handleMenu}
-              className={classes.mobileNavCloser}><i className="fa-solid fa-xmark"></i>
-            </a>
-            <a onClick={handleMenu} href='#home' className={`${classes.mobileNavLink} ${classes.one}`}>HOME</a>
-            <a onClick={handleMenu} href='#about' className={`${classes.mobileNavLink} ${classes.two}`}>ABOUT</a>
-            <a onClick={handleMenu} href='#portfolio' className={`${classes.mobileNavLink} ${classes.three}`}>PORTFOLIO</a>
-            <a onClick={handleMenu} href='#contact' className={`${classes.mobileNavLink} ${classes.mobileNavButton} ${classes.four}`}>CONTACT</a>
-          </nav>
-        </Modal>
-      }
+      <Modal
+        onShow={showMobileNav}
+        onBackdrop={handleMenu}>
+        <nav className={classes.mobileNav}>
+          <a
+            href='#mobileNav'
+            onClick={handleMenu}
+            className={classes.mobileNavCloser}><i className="fa-solid fa-xmark"></i>
+          </a>
+          <a onClick={handleMenu} href='#home' className={`${classes.mobileNavLink} ${classes.one}`}>HOME</a>
+          <a onClick={handleMenu} href='#about' className={`${classes.mobileNavLink} ${classes.two}`}>ABOUT</a>
+          <a onClick={handleMenu} href='#portfolio' className={`${classes.mobileNavLink} ${classes.three}`}>PORTFOLIO</a>
+          <a onClick={handleMenu} href='#contact' className={`${classes.mobileNavLink} ${classes.mobileNavButton} ${classes.four}`}>CONTACT</a>
+        </nav>
+      </Modal>
 
       <nav className={(top && classes.top) || (showNav && classes.show) || classes.section}>
         {!mobile && desktopNav}

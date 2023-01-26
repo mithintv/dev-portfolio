@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import "../index.scss";
 
 @keyframes appear {
   from {
@@ -75,7 +75,7 @@
   @extend .section;
   transform: translateY(0px);
   box-shadow: 0px 5px 10px #dadada;
-  z-index: 4;
+  z-index: 3;
 }
 
 .top {
