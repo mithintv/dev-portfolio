@@ -165,7 +165,7 @@ const Form = props => {
             ref={nameRef}
             name='name'
             type='text' placeholder='Your Name' />
-          <p className={valid.name.showError ? 'error' : ''}>Please enter a valid name</p>
+          <p className={valid.name.showError ? 'error' : 'hideError'}>Please enter a valid name</p>
         </div>
         <div className='inputWrapper'>
           <input
@@ -175,7 +175,7 @@ const Form = props => {
             ref={emailRef}
             name='email'
             type='email' placeholder='Your Email' />
-          <p className={valid.email.showError ? 'error' : ''}>Please enter a valid email</p>
+          <p className={valid.email.showError ? 'error' : 'hideError'}>Please enter a valid email</p>
         </div>
       </div>
       <div className='formMessage'>
@@ -186,7 +186,7 @@ const Form = props => {
           ref={messageRef}
           name='message'
           placeholder='Your Message' />
-        <p className={valid.message.showError ? 'error' : ''}>Message cannot be empty</p>
+        <p className={valid.message.showError ? 'error' : 'hideError'}>Message cannot be empty</p>
       </div>
       <Button
         size='xl'>

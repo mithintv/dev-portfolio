@@ -1,6 +1,4 @@
-@import '../index.scss';
-
-
+@import "../index.scss";
 
 .banner {
   display: flex;
@@ -13,7 +11,7 @@
   line-height: 0.5rem;
   margin: 0.25rem 0 0.25rem 0;
   color: #919191;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.15rem;
   animation: appear 0.5s ease;
 }
@@ -22,7 +20,7 @@
   line-height: 1rem;
   margin: 1rem 0 1rem 0;
   color: #393939;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
   animation: appear 1s ease;
@@ -30,7 +28,7 @@
 
 .bannerQuote {
   margin: 0.5rem 0 0rem 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 0.85rem;
   width: 35rem;
@@ -52,7 +50,6 @@
 }
 
 @include devices(laptop) {
-
   .bannerTitle {
     font-size: 2.75rem;
     line-height: 2.75rem;
@@ -65,7 +62,6 @@
 }
 
 @include devices(tablet) {
-
   .home {
     .banner {
       text-align: center;
@@ -90,8 +86,8 @@
 }
 
 @include devices(mobile) {
-
   .home {
+    margin-top: calc(100vh / 14);
     .banner {
       text-align: center;
       align-items: center;

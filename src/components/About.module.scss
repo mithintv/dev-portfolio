@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import "../index.scss";
 
 .about {
   display: flex;
@@ -28,12 +28,12 @@
         animation: appear 1s ease;
       }
 
-      .text>a {
+      .text > a {
         color: $nav-font-color-hover;
         text-decoration: underline;
       }
 
-      .text>a:hover {
+      .text > a:hover {
         color: $button-color-hover;
       }
     }
@@ -59,14 +59,14 @@
         line-height: 1rem;
       }
 
-      .tech>p {
+      .tech > p {
         margin: 0 0 0.25rem 0;
         width: 4rem;
         animation: appear 1.5s ease;
       }
     }
 
-    .skills>h3 {
+    .skills > h3 {
       animation: appear 1.25s ease;
     }
   }
@@ -122,6 +122,8 @@
 
 @include devices(mobile) {
   .about {
+    padding-top: 0.5rem;
+
     .body {
       display: flex;
       flex-direction: column;

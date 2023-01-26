@@ -13,12 +13,20 @@ const Portfolio = () => {
         <Header>PORTFOLIO</Header>
         <ul className={classes.content}>
           <Card
+            img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fono_1.gif?alt=media&token=017f895e-a683-4cf2-bf94-d33f8b1d8b7e'
+            title='One-On-One'
+            description="One-On-One is a slack bot that randomly pairs up individuals within a channel for one-on-one's to help them get to know each other."
+            tech={['Node', 'MongoDB', 'Slack API', 'Render']}
+            git='https://github.com/mithintv/one-on-one'
+            link='https://slack.com/apps/A04DXH6FR8U-one-on-one'
+          />
+          <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fwordle-tracker-screen.png?alt=media&token=008c0cc0-0b22-4fce-825f-0eab63d487f4'
             title='Wordle Leaderboard'
             description='A slackbot that keeps track of daily Wordle scores hooked to a frontend that sorts players in a leaderboard with additional stats.'
-            tech={['React', 'Bulma', 'Node', 'Express', 'MongoDB', 'Slack API', 'Heroku']}
+            tech={['React', 'Bulma', 'Node', 'Express', 'MongoDB', 'Slack API', 'Render']}
             git='https://github.com/mithintv/wordle-tracker'
-            link='https://wordle-tracker-client.herokuapp.com'
+            link='https://wordle-tracker.netlify.app/#all'
           />
           <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fportfolio-screen.png?alt=media&token=1e56e6d4-b07a-46a4-8359-e5ad66b29189'
@@ -33,7 +41,7 @@ const Portfolio = () => {
             title='Food Order App'
             description='A front-end proof of concept with a dynamic cart for a hypothetical food ordering app built with React and Firebase.'
             tech={['React', 'CSS3', 'Firebase', 'Netlify']}
-            git='https://github.com/mithintv/food-order-app'
+            git='https://papaya-lily-f123eb.netlify.app/'
             link='https://github.com/mithintv/food-order-app'
           />
           <Card

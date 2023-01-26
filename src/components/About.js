@@ -70,7 +70,6 @@ const About = () => {
               <p>Git & Github</p>
               <p>Chrome DevTools</p>
               <p>Postman</p>
-              <p>VSCode</p>
             </div>
           </div>
           <div className={classes.button}>
