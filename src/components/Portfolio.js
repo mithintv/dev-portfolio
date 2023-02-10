@@ -13,6 +13,14 @@ const Portfolio = () => {
         <Header>PORTFOLIO</Header>
         <ul className={classes.content}>
           <Card
+            img='/Screenshot 2023-02-10 121222.png'
+            title='Film Portfolio'
+            description="A web portfolio of my film and commercial work. Working on this portfolio was the initial inspiration and catalyst to my journey as a developer and software engineer."
+            tech={['Emotion', 'MySQL', 'Next.js', 'Sequelize', 'React', 'Typescript', 'Vercel']}
+            git='https://github.com/mithintv/film-portfolio'
+            link='https://mithin.tv'
+          />
+          <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fono_1.gif?alt=media&token=017f895e-a683-4cf2-bf94-d33f8b1d8b7e'
             title='One-On-One'
             description="One-On-One is a slack bot that randomly pairs up individuals within a channel for one-on-one's to help them get to know each other."
