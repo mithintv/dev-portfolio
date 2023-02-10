@@ -49,7 +49,6 @@ const About = () => {
             <h3>Technologies</h3>
             <div className={classes.tech}>
               <p>Bash</p>
-              <p>Chrome DevTools</p>
               <p>Cypress</p>
               <p>Bootstrap</p>
               <p>Bulma</p>
