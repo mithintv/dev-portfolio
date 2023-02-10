@@ -47,29 +47,33 @@ const About = () => {
           <div className={classes.skills}>
             <h3>Technologies</h3>
             <div className={classes.tech}>
-              <p>JavaScript</p>
-              <p>React</p>
-              <p>Redux</p>
-              <p>Node</p>
-              <p>Express</p>
-              <p>Python</p>
-              <p>CSS/Sass</p>
-              <p>HTML5</p>
+              <p>Bash</p>
+              <p>Chrome DevTools</p>
+              <p>Cypress</p>
               <p>Bootstrap</p>
               <p>Bulma</p>
-              <p>Material UI</p>
-              <p>Tailwind</p>
+              <p>CSS/Sass</p>
               <p>EJS</p>
-              <p>Cypress</p>
-              <p>MongoDB</p>
-              <p>Mongoose</p>
+              <p>Express</p>
               <p>Firestore</p>
               <p>Firebase</p>
-              <p>PostgreSQL</p>
-              <p>Bash</p>
-              <p>Git & Github</p>
-              <p>Chrome DevTools</p>
+              <p>Git/Github</p>
+              <p>HTML5</p>
+              <p>JavaScript</p>
+              <p>Jest</p>
+              <p>Node</p>
+              <p>MUI</p>
+              <p>MongoDB</p>
+              <p>Mongoose</p>
+              <p>Next.js</p>
+              <p>MySQL</p>
               <p>Postman</p>
+              <p>Python</p>
+              <p>React</p>
+              <p>Redux</p>
+              <p>Sequelize</p>
+              <p>Tailwind</p>
+              <p>TypeScript</p>
             </div>
           </div>
           <div className={classes.button}>

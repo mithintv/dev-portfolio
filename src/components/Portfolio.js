@@ -24,7 +24,7 @@ const Portfolio = () => {
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fono_1.gif?alt=media&token=017f895e-a683-4cf2-bf94-d33f8b1d8b7e'
             title='One-On-One'
             description="One-On-One is a slack bot that randomly pairs up individuals within a channel for one-on-one's to help them get to know each other."
-            tech={['MongoDB', 'Node', 'Render', 'Slack API']}
+            tech={['Jest', 'MongoDB', 'Node', 'Render', 'Slack API']}
             git='https://github.com/mithintv/one-on-one'
             link='https://slack.com/apps/A04DXH6FR8U-one-on-one'
           />
