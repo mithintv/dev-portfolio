@@ -13,7 +13,7 @@ const Portfolio = () => {
         <Header>PORTFOLIO</Header>
         <ul className={classes.content}>
           <Card
-            img='/Screenshot 2023-02-10 121222.png'
+            img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Ffilm-portfolio-screenshot.png?alt=media&token=796b8c1b-f4f2-4c40-a0e1-8eee5a7a884c'
             title='Film Portfolio'
             description="A web portfolio of my film and commercial work. Working on this portfolio was the initial inspiration and catalyst to my journey as a developer and software engineer."
             tech={['Emotion', 'MySQL', 'Next.js', 'Sequelize', 'React', 'Typescript', 'Vercel']}
