@@ -64,9 +64,9 @@ const Portfolio = () => {
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fyelp-camp-screen.png?alt=media&token=54ae09d3-68db-4abb-9482-6d39418222fa'
             title='Yelp Camp'
             description='A Yelp-like application for campgrounds. Create an account and add campgrounds you have visited as well as review campgrounds that other users have added.'
-            tech={['Bootstrap', 'EJS', 'Express', 'Node', 'MongoDB', 'Mongoose', 'Heroku']}
+            tech={['Bootstrap', 'Cyclic', 'EJS', 'Express', 'Helmet', 'Node', 'MongoDB', 'Mongoose', 'Passport']}
             git='https://github.com/mithintv/yelp-camp'
-            link='https://enigmatic-sierra-35074.herokuapp.com/'
+            link='https://blush-nightingale-wear.cyclic.app/.netlify/functions/app/campgrounds'
           />
           <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fsimon-game-screen.png?alt=media&token=1d36f31e-7639-413c-b6d6-dbdc745705f8'
