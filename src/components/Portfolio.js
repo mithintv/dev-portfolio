@@ -16,15 +16,15 @@ const Portfolio = () => {
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Ffilm-portfolio-screenshot.png?alt=media&token=796b8c1b-f4f2-4c40-a0e1-8eee5a7a884c'
             title='Film Portfolio'
             description="A web portfolio of my film and commercial work. Working on this portfolio was the initial inspiration and catalyst to my journey as a developer and software engineer."
-            tech={['Emotion', 'MySQL', 'Next.js', 'Sequelize', 'React', 'Typescript', 'Vercel']}
+            tech={['Emotion', 'MySQL', 'Next.js', 'Sequelize', 'React.js', 'Typescript', 'Vercel']}
             git='https://github.com/mithintv/film-portfolio'
             link='https://mithin.tv'
           />
           <Card
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fono_1.gif?alt=media&token=017f895e-a683-4cf2-bf94-d33f8b1d8b7e'
-            title='One-On-One'
-            description="One-On-One is a slack bot that randomly pairs up individuals within a channel for one-on-one's to help them get to know each other."
-            tech={['Jest', 'MongoDB', 'Node', 'Render', 'Slack API']}
+            title='One On One'
+            description="One On One is a slack bot that randomly pairs up individuals within a channel for one-on-one's to help them get to know each other."
+            tech={['Jest', 'MongoDB', 'Node.js', 'Render', 'Slack API']}
             git='https://github.com/mithintv/one-on-one'
             link='https://slack.com/apps/A04DXH6FR8U-one-on-one'
           />
@@ -32,7 +32,7 @@ const Portfolio = () => {
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fwordle-tracker-screen.png?alt=media&token=008c0cc0-0b22-4fce-825f-0eab63d487f4'
             title='Wordle Leaderboard'
             description='A slackbot that keeps track of daily Wordle scores hooked to a frontend that sorts players in a leaderboard with additional stats.'
-            tech={['Bulma', 'Express', 'MongoDB', 'Node', 'React', 'Render', 'Slack API',]}
+            tech={['Bulma', 'Express.js', 'MongoDB', 'Node.js', 'React.js', 'Render', 'Slack API',]}
             git='https://github.com/mithintv/wordle-tracker'
             link='https://wordle-tracker.netlify.app/#all'
           />
@@ -48,7 +48,7 @@ const Portfolio = () => {
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Ffood-order-app-screen.png?alt=media&token=7c3b85d2-af31-4a6f-8ae7-2d50eaffc328'
             title='Food Order App'
             description='A front-end proof of concept with a dynamic cart for a hypothetical food ordering app built with React and Firebase.'
-            tech={['CSS3', 'Firebase', 'Netlify', 'React']}
+            tech={['CSS3', 'Firebase', 'Netlify', 'React.js']}
             git='https://github.com/mithintv/food-order-app'
             link='https://papaya-lily-f123eb.netlify.app/'
           />
@@ -56,7 +56,7 @@ const Portfolio = () => {
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fkeeper-app-screen.png?alt=media&token=03f8b193-b2b2-4997-aba0-ed62ca110426'
             title='Keeper'
             description='A clone of Google Keep. Create, update, and delete notes!'
-            tech={['CSS3', 'Netlify', 'React']}
+            tech={['CSS3', 'Netlify', 'React.js']}
             git='https://github.com/mithintv/keeper-app'
             link='https://keeper-app-project.netlify.app/'
           />
@@ -64,7 +64,7 @@ const Portfolio = () => {
             img='https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fyelp-camp-screen.png?alt=media&token=54ae09d3-68db-4abb-9482-6d39418222fa'
             title='Yelp Camp'
             description='A Yelp-like application for campgrounds. Create an account and add campgrounds you have visited as well as review campgrounds that other users have added.'
-            tech={['Bootstrap', 'Cyclic', 'EJS', 'Express', 'Helmet', 'Node', 'MongoDB', 'Mongoose', 'Passport']}
+            tech={['Bootstrap', 'Cyclic', 'EJS', 'Express.js', 'Helmet', 'Node.js', 'MongoDB', 'Mongoose', 'Passport.js']}
             git='https://github.com/mithintv/yelp-camp'
             link='https://blush-nightingale-wear.cyclic.app/.netlify/functions/app/campgrounds'
           />
