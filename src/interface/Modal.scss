@@ -69,6 +69,7 @@
   @extend .backdropBlur;
   backdrop-filter: blur(0px);
   animation: blurOut 0.5s;
+  z-index: -1;
 }
 
 .modalOpen {
