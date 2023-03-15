@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { resumeLink } from "../constants";
 
-import Button from "../interface/Button";
 import Header from "../interface/Header";
 import classes from "./About.module.scss";
+import Resume from "./Resume";
 
 const About = () => {
   const [tablet, setTablet] = useState(false);
@@ -49,14 +48,7 @@ const About = () => {
               actively working on a film/commerical set. You can check out my
               film and production work <a href="https://mithin.tv">here</a>.
             </p>
-            {!tablet && !laptop && (
-              <a target="_blank" rel="noreferrer" href={resumeLink}>
-                <Button size="md">
-                  DOWNLOAD RESUME{" "}
-                  <i className="fa-solid fa-file-arrow-down"></i>
-                </Button>
-              </a>
-            )}
+            {!tablet && !laptop && <Resume />}
           </div>
           <div className={classes.skills}>
             <h3>Technologies</h3>
@@ -95,26 +87,9 @@ const About = () => {
               <p>TypeScript</p>
             </div>
           </div>
-          <div className={classes.button}>
-            {tablet && (
-              <a target="_blank" rel="noreferrer" href={resumeLink}>
-                <Button size="md">
-                  DOWNLOAD RESUME{" "}
-                  <i className="fa-solid fa-file-arrow-down"></i>
-                </Button>
-              </a>
-            )}
-          </div>
+          <div className={classes.button}>{tablet && <Resume />}</div>
         </div>
-        <div className={classes.button}>
-          {laptop && (
-            <a target="_blank" rel="noreferrer" href={`${resumeLink}`}>
-              <Button size="md">
-                DOWNLOAD RESUME <i className="fa-solid fa-file-arrow-down"></i>
-              </Button>
-            </a>
-          )}
-        </div>
+        <div className={classes.button}>{laptop && <Resume />}</div>
       </div>
     </section>
   );

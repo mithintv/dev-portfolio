@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 import classes from "./NavBar.module.scss";
 
-import Button from '../interface/Button';
-import Modal from '../interface/Modal';
+// import Button from "../interface/Button";
+import Modal from "../interface/Modal";
 
-import { resumeLink } from "../constants";
+// import { resumeLink } from "../constants";
 
-const Navbar = props => {
+const Navbar = (props) => {
   // #1 state for showing full desktop nav or hamburger
   const [showNav, setShowNav] = useState(true);
 
@@ -28,15 +28,13 @@ const Navbar = props => {
   const handleScroll = () => {
     if (scroll < 100) {
       setTop(true);
-    }
-    else if (scroll < window.scrollY) {
+    } else if (scroll < window.scrollY) {
       setShowNav(false);
       setTop(false);
-    }
-    else {
+    } else {
       setShowNav(true);
       setTop(false);
-    };
+    }
     setScroll(window.scrollY);
   };
 
@@ -48,15 +46,15 @@ const Navbar = props => {
       setMobile(false);
       setShowMobileNav(false);
       setScrollState(true);
-    };
+    }
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   });
 
@@ -65,31 +63,65 @@ const Navbar = props => {
   }, []);
 
   const handleMenu = (event) => {
-    setScrollState(prevState => !prevState);
-    setShowMobileNav(prevState => !prevState);
+    setScrollState((prevState) => !prevState);
+    setShowMobileNav((prevState) => !prevState);
     setHamClicked(true);
-    if (event.target.name === 'link') {
+    if (event.target.name === "link") {
       setTimeout(() => {
         setScroll(window.scrollY + 100);
       }, 1000);
-
     }
   };
 
-  document.body.style.overflowY = scrollState ? 'scroll' : 'hidden';
+  document.body.style.overflowY = scrollState ? "scroll" : "hidden";
 
-  const mobileNav =
-    <Modal
-      onLoad={hamClicked}
-      onClick={showMobileNav}
-      onBackdrop={handleMenu}>
-      <nav className={(top && !showMobileNav && classes.top) || (showNav && classes.show) || classes.section}>
+  const mobileNav = (
+    <Modal onLoad={hamClicked} onClick={showMobileNav} onBackdrop={handleMenu}>
+      <nav
+        className={
+          (top && !showMobileNav && classes.top) ||
+          (showNav && classes.show) ||
+          classes.section
+        }
+      >
         <nav className={classes.mobileNav}>
-          <a name='link' onClick={handleMenu} href='#home' className={`${classes.mobileNavLink} ${classes.one}`}>HOME</a>
-          <a name='link' onClick={handleMenu} href='#about' className={`${classes.mobileNavLink} ${classes.two}`}>ABOUT</a>
-          <a name='link' onClick={handleMenu} href='#portfolio' className={`${classes.mobileNavLink} ${classes.three}`}>PORTFOLIO</a>
-          <a name='link' onClick={handleMenu} href='#contact' className={`${classes.mobileNavLink} ${classes.mobileNavButton} ${classes.four}`}>CONTACT</a>
-          <div id="nav-icon3" onClick={handleMenu} className={showMobileNav ? 'open' : ''}>
+          <a
+            name="link"
+            onClick={handleMenu}
+            href="#home"
+            className={`${classes.mobileNavLink} ${classes.one}`}
+          >
+            HOME
+          </a>
+          <a
+            name="link"
+            onClick={handleMenu}
+            href="#about"
+            className={`${classes.mobileNavLink} ${classes.two}`}
+          >
+            ABOUT
+          </a>
+          <a
+            name="link"
+            onClick={handleMenu}
+            href="#portfolio"
+            className={`${classes.mobileNavLink} ${classes.three}`}
+          >
+            PORTFOLIO
+          </a>
+          <a
+            name="link"
+            onClick={handleMenu}
+            href="#contact"
+            className={`${classes.mobileNavLink} ${classes.mobileNavButton} ${classes.four}`}
+          >
+            CONTACT
+          </a>
+          <div
+            id="nav-icon3"
+            onClick={handleMenu}
+            className={showMobileNav ? "open" : ""}
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -102,7 +134,8 @@ const Navbar = props => {
           </a> */}
         </nav>
       </nav>
-    </Modal>;
+    </Modal>
+  );
 
   // const mobileNav = showMobileNav ? '' :
   //   (<nav className={classes.mobileNav}>
@@ -113,20 +146,35 @@ const Navbar = props => {
   //     </a>
   //   </nav>);
 
-  const desktopNav =
+  const desktopNav = (
     <nav className={classes.nav}>
-      <a href='#home' className={`${classes.navButton} ${classes.one}`}>HOME</a>
-      <a href='#about' className={`${classes.navButton} ${classes.two}`}>ABOUT</a>
-      <a href='#portfolio' className={`${classes.navButton} ${classes.three}`}>PORTFOLIO</a>
-      <a href='#contact' className={`${classes.navButton} ${classes.four}`}>CONTACT</a>
-      <a target="_blank" rel="noreferrer" href={`${resumeLink}`} className={`${classes.navButton} ${classes.five}`}><Button size='xs'>RESUME</Button></a>
-    </nav>;
+      <a href="#home" className={`${classes.navButton} ${classes.one}`}>
+        HOME
+      </a>
+      <a href="#about" className={`${classes.navButton} ${classes.two}`}>
+        ABOUT
+      </a>
+      <a href="#portfolio" className={`${classes.navButton} ${classes.three}`}>
+        PORTFOLIO
+      </a>
+      <a href="#contact" className={`${classes.navButton} ${classes.four}`}>
+        CONTACT
+      </a>
+      {/* <a target="_blank" rel="noreferrer" href={`${resumeLink}`} className={`${classes.navButton} ${classes.five}`}><Button size='xs'>RESUME</Button></a> */}
+    </nav>
+  );
 
   return (
     <React.Fragment>
-      {!mobile && <nav className={(top && classes.top) || (showNav && classes.show) || classes.section}>
-        {desktopNav}
-      </nav>}
+      {!mobile && (
+        <nav
+          className={
+            (top && classes.top) || (showNav && classes.show) || classes.section
+          }
+        >
+          {desktopNav}
+        </nav>
+      )}
       {mobile && mobileNav}
     </React.Fragment>
   );
