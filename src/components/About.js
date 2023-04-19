@@ -57,8 +57,6 @@ const About = () => {
               <p>Cypress</p>
               <p>Bootstrap</p>
               <p>Bulma</p>
-              <p>C#</p>
-              <p>C++</p>
               <p>CSS/Sass</p>
               <p>Django</p>
               <p>EJS</p>
