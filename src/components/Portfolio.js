@@ -10,6 +10,14 @@ const Portfolio = () => {
         <Header>PORTFOLIO</Header>
         <ul className={classes.content}>
           <Card
+            img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fdemographix_gif.gif?alt=media"
+            title="Demographix"
+            description="Demographix is a data visualization tool designed to showcase demographics of on-screen cast members in popular Hollywood movies."
+            tech={["Beautiful Soup", "Flask", "Material UI", "React.js", "OpenAI API", "PaLM API", "PostgreSQL", "Python", "SQLAlchemy"]}
+            git="https://github.com/mithintv/demographix"
+            link="http://18.209.200.234/"
+          />
+          <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fhorse-race_gif.gif?alt=media"
             title="Horse Race"
             description="Horse Race is a web implementation of a drinking game usually played with a deck of cards. Players bet on up to four horses (represented as aces of a suit) and the horses themselves move across the 'field' based on cards that are drawn from the deck."
@@ -57,14 +65,14 @@ const Portfolio = () => {
             git="https://github.com/mithintv/wordle-tracker"
             link="https://wordle-tracker.netlify.app/#all"
           />
-          <Card
+          {/* <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fportfolio-screen.png?alt=media"
             title="Portfolio"
             description="The latest iteration of my portfolio. This is a single-page built with React, CSS3/Sass and Firebase hosted on Netlify."
             tech={["CSS3/Sass", "Firebase", "Netlify", "React"]}
             git="https://github.com/mithintv/portfolio-react"
             link="https://portfolio-react-2022-v1.netlify.app/"
-          />
+          /> */}
           <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Ffood-order-app-screen.png?alt=media"
             title="Food Order App"
@@ -73,15 +81,15 @@ const Portfolio = () => {
             git="https://github.com/mithintv/food-order-app"
             link="https://papaya-lily-f123eb.netlify.app/"
           />
-          <Card
+          {/* <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fkeeper-app-screen.png?alt=media"
             title="Keeper"
             description="A clone of Google Keep. Create, update, and delete notes!"
             tech={["CSS3", "Netlify", "React.js"]}
             git="https://github.com/mithintv/keeper-app"
             link="https://keeper-app-project.netlify.app/"
-          />
-          <Card
+          /> */}
+          {/* <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fyelp-camp-screen.png?alt=media"
             title="Yelp Camp"
             description="A Yelp-like application for campgrounds. Create an account and add campgrounds you have visited as well as review campgrounds that other users have added."
@@ -98,15 +106,15 @@ const Portfolio = () => {
             ]}
             git="https://github.com/mithintv/yelp-camp"
             link="https://blush-nightingale-wear.cyclic.app/.netlify/functions/app/campgrounds"
-          />
-          <Card
+          /> */}
+          {/* <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fsimon-game-screen.png?alt=media"
             title="Simon Game"
             description="This is a web implementation of Simon, an electronic game of short-term memory skill originally released in 1978 built with vanilla JavaScript and CSS3."
             tech={["CSS3", "GitPages", "HTML5", "JavaScript"]}
             git="https://github.com/mithintv/simon-game"
             link="https://mithintv.github.io/simon-game/"
-          />
+          /> */}
         </ul>
       </div>
     </section>
