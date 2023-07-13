@@ -15,7 +15,7 @@ const Portfolio = () => {
             description="Demographix is a data visualization tool designed to showcase demographics of on-screen cast members in popular Hollywood movies."
             tech={["Beautiful Soup", "Flask", "Material UI", "React.js", "OpenAI API", "PaLM API", "PostgreSQL", "Python", "SQLAlchemy"]}
             git="https://github.com/mithintv/demographix"
-            link="http://18.209.200.234/"
+            link="http://demographix.mithin.com/"
           />
           <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fhorse-race_gif.gif?alt=media"

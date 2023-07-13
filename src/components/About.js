@@ -54,6 +54,7 @@ const About = () => {
             <h3>Technologies</h3>
             <div className={classes.tech}>
               <p>Bash</p>
+              <p>C#</p>
               <p>Cypress</p>
               <p>Bootstrap</p>
               <p>Bulma</p>
@@ -63,6 +64,7 @@ const About = () => {
               <p>Emotion</p>
               <p>Express.js</p>
               <p>Firebase</p>
+              <p>Flask</p>
               <p>Git/Github</p>
               <p>HTML5</p>
               <p>Java</p>
@@ -72,8 +74,10 @@ const About = () => {
               <p>MongoDB</p>
               <p>Mongoose</p>
               <p>MySQL</p>
+              <p>.NET</p>
               <p>Next.js</p>
               <p>Node.js</p>
+              <p>Postgres</p>
               <p>Postman</p>
               <p>Python</p>
               <p>React.js</p>
@@ -81,6 +85,7 @@ const About = () => {
               <p>REST API</p>
               <p>Sequelize</p>
               <p>SQL</p>
+              <p>SQLAlchemy</p>
               <p>Tailwind</p>
               <p>TypeScript</p>
             </div>
