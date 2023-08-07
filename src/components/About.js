@@ -53,6 +53,7 @@ const About = () => {
           <div className={classes.skills}>
             <h3>Technologies</h3>
             <div className={classes.tech}>
+              <p>ASP.NET</p>
               <p>Bash</p>
               <p>C#</p>
               <p>Cypress</p>
