@@ -1,0 +1,152 @@
+@import "../index.scss";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.25rem 0;
+
+  .button {
+    margin: 0 auto;
+    animation: appear 1.5s ease;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .background {
+      display: flex;
+      flex-direction: column;
+      padding-right: 3rem;
+      width: 50%;
+
+      .text {
+        margin: 0.25rem 0;
+        text-align: justify;
+        animation: appear 1s ease;
+      }
+
+      .text > a {
+        color: $nav-font-color-hover;
+        text-decoration: underline;
+      }
+
+      .text > a:hover {
+        color: $button-color-hover;
+      }
+    }
+
+    .background h3 {
+      animation: appear 0.75s ease;
+    }
+
+    .skills {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+      width: 50%;
+      animation: appear 1s ease;
+
+      .tech {
+        display: flex;
+        flex-flow: column wrap;
+        height: 13.4rem;
+        gap: 2.5px 15px;
+        font-size: 0.75rem;
+        font-family: $font;
+        line-height: 1rem;
+      }
+
+      .tech > p {
+        margin: 0 0 0.25rem 0;
+        width: 4.5rem;
+        animation: appear 1.5s ease;
+      }
+    }
+
+    .skills > h3 {
+      animation: appear 1.25s ease;
+    }
+  }
+}
+
+@include devices(laptop) {
+  .about {
+    .body {
+      display: flex;
+      flex-direction: column;
+
+      .background {
+        padding-right: 0rem;
+        width: 100%;
+      }
+
+      .skills {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0;
+
+        .tech {
+          height: 11rem;
+        }
+      }
+    }
+  }
+}
+
+@include devices(tablet) {
+  .about {
+    .body {
+      display: flex;
+      flex-direction: column;
+
+      .background {
+        padding-right: 0rem;
+        width: 100%;
+      }
+
+      .skills {
+        margin-bottom: 1rem;
+        padding: 0;
+        width: 100%;
+
+        .tech {
+          height: 14rem;
+        }
+      }
+    }
+  }
+}
+
+@include devices(mobile) {
+  .about {
+    padding-top: 0.5rem;
+
+    .body {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        font-size: 0.85rem;
+        width: 14rem;
+      }
+
+      .background {
+        padding-right: 0rem;
+        width: 100%;
+      }
+
+      .skills {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0;
+
+        .tech {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}

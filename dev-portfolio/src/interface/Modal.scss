@@ -1,0 +1,95 @@
+@import "../index.scss";
+
+@keyframes drawerIn {
+  from {
+    transform: translateY(-25rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawerOut {
+  from {
+    transform: translateY(25rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes blurIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+
+  to {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+}
+
+@keyframes blurOut {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+}
+
+@keyframes AppearIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.backdropBlur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  animation: blurIn 0.5s;
+}
+
+.backdropUnblur {
+  @extend .backdropBlur;
+  backdrop-filter: blur(0px);
+  animation: blurOut 0.5s;
+  z-index: -1;
+}
+
+.modalOpen {
+  background-color: $background-color-l1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  box-shadow: 0px 5px 10px #dadada;
+  animation: drawerIn 0.5s ease;
+}
+
+.modalClose {
+  @extend .modalOpen;
+  top: -25.2rem;
+  animation: drawerOut 0.5s ease;
+}
+
+.appear {
+  @extend .modalOpen;
+  top: -25.2rem;
+  animation: AppearIn 1s ease;
+}

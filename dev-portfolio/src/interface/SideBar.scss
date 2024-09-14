@@ -1,0 +1,55 @@
+@import "../index.scss";
+
+.sidebar {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in 1s ease;
+}
+
+.sidebar::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100px;
+  margin: 25px auto 0;
+  background-color: black;
+}
+
+.left {
+  left: 30px;
+  right: auto;
+}
+
+.right {
+  right: 30px;
+  left: auto;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@include devices(tablet) {
+  .sidebar {
+    visibility: hidden;
+  }
+}
+
+@include devices(mobile) {
+  .sidebar {
+    visibility: hidden;
+  }
+}

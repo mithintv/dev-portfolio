@@ -1,0 +1,35 @@
+@import '../index.scss';
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  animation: appear 0.5s ease forwards;
+
+  .header-text {
+    display: inline-block;
+    margin: 0 0 3.5rem;
+    padding: 0 1rem 0rem;
+    font-size: 2rem;
+    color: $heading-font-color-l2;
+    border-bottom: 3px solid #BCBCBC;
+  }
+}
+
+@include devices(tablet) {
+
+  .header {
+    .header-text {
+      margin: 0 0 1rem;
+    }
+  }
+}
+
+@include devices(mobile) {
+
+  .header {
+    .header-text {
+      margin: 0 0 0.75rem;
+    }
+  }
+}

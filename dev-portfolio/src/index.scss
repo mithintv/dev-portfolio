@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@400;500;600;700;900&display=swap");
+
+// SCSS Variables
+$heading-font: "Poppins", sans-serif;
+$font: "Raleway", sans-serif;
+$heading-font-color-l1: #919191;
+$heading-font-color-l2: #494949;
+$nav-font-color: #777777;
+$nav-font-color-hover: #afafaf;
+$p-color: #767676;
+$input-color: #505050;
+
+$background-color-l1: #fff;
+$background-color-l2: #fff;
+
+$body-margin: 0 6rem;
+$body-margin-md: 0 5rem;
+$body-margin-sm: 0 3rem;
+$body-margin-xs: 0 1.75rem;
+$body-margin-xxxs: 0 0.1rem;
+
+$button-color: #393939;
+$button-color-disabled: #848484;
+$button-color-icon: #505050;
+$button-color-hover: #000000;
+
+// Breakpoints
+@mixin devices($breakpoint) {
+  @if $breakpoint ==monitor {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==laptop {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tablet {
+    @media screen and (min-width: 425px) and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==mobile {
+    @media screen and (max-width: 425px) {
+      @content;
+    }
+  }
+}
+
+// Animations
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// custom scrollbar
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background-color-l1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(150, 150, 150);
+  border: 2px solid $background-color-l1;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(125, 125, 125);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-color-l1;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 0 10rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  color: $heading-font-color-l2;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+p {
+  color: $p-color;
+  margin-top: 0;
+  line-height: 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: $font;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: 1rem;
+  font-family: $font;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  font-family: $font;
+  color: $input-color;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid rgb(150, 150, 150);
+}
+
+section {
+  display: flex;
+  justify-self: center;
+  background-color: $background-color-l1;
+  margin-top: 7rem;
+  padding: 7rem 0 0;
+}
+
+// section:nth-child(odd) {
+//   background-color: $background-color-l2;
+// }
+
+section > div > div {
+  margin: $body-margin;
+}
+
+@include devices(monitor) {
+  section > div {
+    width: 1024px;
+    margin: auto;
+  }
+}
+
+@include devices(laptop) {
+  section > div {
+    width: 768px;
+    margin: auto;
+  }
+
+  section > div > div {
+    margin: $body-margin;
+  }
+}
+
+@include devices(tablet) {
+  section > div {
+    width: 90%;
+    margin: auto;
+  }
+
+  section > div > div {
+    margin: $body-margin-xs;
+  }
+}
+
+@include devices(mobile) {
+  body {
+    padding-bottom: calc(100vh / 25);
+  }
+  section {
+    margin-top: calc(100vh / 12);
+    padding-top: calc(100vh / 14);
+  }
+
+  section > div {
+    width: 90%;
+    margin: auto;
+  }
+
+  section > div > div {
+    margin: $body-margin-xs;
+  }
+}
+
+#nav-icon3 {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin: 15px auto 2.5px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#nav-icon3 span {
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: $button-color-icon;
+  border-radius: 9px;
+  left: 0;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 12px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 24px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
