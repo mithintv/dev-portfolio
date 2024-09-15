@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactGA from "react-ga4";
 
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -11,6 +12,15 @@ import Social from "./ui/Social";
 const App = () => {
 	const [home, setHome] = useState(false);
 	const [sideBar, setSideBar] = useState(false);
+
+	useEffect(() => {
+		ReactGA.initialize(import.meta.env.VITE_GA);
+		// Send pageview with a custom path
+		ReactGA.send({
+			hitType: "pageview",
+			page: window.location.pathname,
+		});
+	}, []);
 
 	useEffect(() => {
 		setTimeout(() => {
