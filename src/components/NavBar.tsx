@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 
+import Modal from "../ui/Modal";
 import classes from "./NavBar.module.scss";
-
 // import Button from "../interface/Button";
-import Modal from "../interface/Modal";
-
 // import { resumeLink } from "../constants";
 
-const Navbar = (props) => {
+const Navbar = () => {
 	// #1 state for showing full desktop nav or hamburger
 	const [showNav, setShowNav] = useState(true);
 
@@ -62,11 +60,12 @@ const Navbar = (props) => {
 		handleResize();
 	}, []);
 
-	const handleMenu = (event) => {
+	const handleMenu: React.MouseEventHandler<HTMLElement> = (event) => {
 		setScrollState((prevState) => !prevState);
 		setShowMobileNav((prevState) => !prevState);
 		setHamClicked(true);
-		if (event.target.name === "link") {
+
+		if (event.currentTarget.tagName === "A") {
 			setTimeout(() => {
 				setScroll(window.scrollY + 100);
 			}, 1000);
@@ -86,7 +85,6 @@ const Navbar = (props) => {
 			>
 				<nav className={classes.mobileNav}>
 					<a
-						name="link"
 						onClick={handleMenu}
 						href="#home"
 						className={`${classes.mobileNavLink} ${classes.one}`}
@@ -94,7 +92,6 @@ const Navbar = (props) => {
 						HOME
 					</a>
 					<a
-						name="link"
 						onClick={handleMenu}
 						href="#about"
 						className={`${classes.mobileNavLink} ${classes.two}`}
@@ -102,7 +99,6 @@ const Navbar = (props) => {
 						ABOUT
 					</a>
 					<a
-						name="link"
 						onClick={handleMenu}
 						href="#portfolio"
 						className={`${classes.mobileNavLink} ${classes.three}`}
@@ -110,7 +106,6 @@ const Navbar = (props) => {
 						PORTFOLIO
 					</a>
 					<a
-						name="link"
 						onClick={handleMenu}
 						href="#contact"
 						className={`${classes.mobileNavLink} ${classes.mobileNavButton} ${classes.four}`}

@@ -5,8 +5,8 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Navbar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
-import SideBar from "./interface/SideBar";
-import Social from "./interface/Social";
+import SideBar from "./ui/SideBar";
+import Social from "./ui/Social";
 
 const App = () => {
 	const [home, setHome] = useState(false);

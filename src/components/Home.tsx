@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../interface/Button";
+import Button from "../ui/Button";
 
 import classes from "./Home.module.scss";
 

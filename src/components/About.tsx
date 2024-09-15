@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Header from "../interface/Header";
+import Header from "../ui/Header";
 import classes from "./About.module.scss";
 import Resume from "./Resume";
 
@@ -38,8 +38,8 @@ const About = () => {
 					<div className={classes.background}>
 						<h3>Background</h3>
 						<p className={classes.text}>
-							I am currently a freelance Software Engineer splitting my time
-							between client work and personal projects. I am passionate about
+							I am currently a Software Engineer splitting my time
+							between work and personal projects. I am passionate about
 							making the world a more egalitarian place and frequently think
 							about ideas and solutions that can make that world a reality.
 						</p>

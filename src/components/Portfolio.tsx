@@ -1,7 +1,7 @@
 import classes from "./Portfolio.module.scss";
 
-import Card from "../interface/Card";
-import Header from "../interface/Header";
+import Card from "../ui/Card";
+import Header from "../ui/Header";
 
 const Portfolio = () => {
 	return (
@@ -55,11 +55,11 @@ const Portfolio = () => {
 						img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fono_1.gif?alt=media"
 						title="One On One"
 						description="One On One is a slack bot that randomly pairs up individuals within a channel for one-on-one's to help them get to know each other."
-						tech={["Jest", "MongoDB", "Node.js", "Render", "Slack API"]}
+						tech={["Jest", "MongoDB", "Node.js", "Slack API"]}
 						git="https://github.com/mithintv/one-on-one"
 						link="https://slack.com/apps/A04DXH6FR8U-one-on-one"
 					/>
-					<Card
+					{/* <Card
 						img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fwordle-tracker-screen.png?alt=media"
 						title="Wordle Leaderboard"
 						description="A slackbot that keeps track of daily Wordle scores hooked to a frontend that sorts players in a leaderboard with additional stats."
@@ -74,7 +74,7 @@ const Portfolio = () => {
 						]}
 						git="https://github.com/mithintv/wordle-tracker"
 						link="https://wordle-tracker.netlify.app/#all"
-					/>
+					/> */}
 					{/* <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fportfolio-screen.png?alt=media"
             title="Portfolio"
@@ -83,14 +83,14 @@ const Portfolio = () => {
             git="https://github.com/mithintv/portfolio-react"
             link="https://portfolio-react-2022-v1.netlify.app/"
           /> */}
-					<Card
+					{/* <Card
 						img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Ffood-order-app-screen.png?alt=media"
 						title="Food Order App"
 						description="A front-end proof of concept with a dynamic cart for a hypothetical food ordering app built with React and Firebase."
 						tech={["CSS3", "Firebase", "Netlify", "React.js"]}
 						git="https://github.com/mithintv/food-order-app"
 						link="https://papaya-lily-f123eb.netlify.app/"
-					/>
+					/> */}
 					{/* <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fkeeper-app-screen.png?alt=media"
             title="Keeper"
@@ -120,8 +120,8 @@ const Portfolio = () => {
 					{/* <Card
             img="https://firebasestorage.googleapis.com/v0/b/portfolio-react-5481e.appspot.com/o/images%2Fsimon-game-screen.png?alt=media"
             title="Simon Game"
-            description="This is a web implementation of Simon, an electronic game of short-term memory skill originally released in 1978 built with vanilla JavaScript and CSS3."
-            tech={["CSS3", "GitPages", "HTML5", "JavaScript"]}
+            description="This is a web implementation of Simon, an electronic game of short-term memory skill originally released in 1978 built with vanilla JavaScript and CSS."
+            tech={["CSS", "GitPages", "HTML5", "JavaScript"]}
             git="https://github.com/mithintv/simon-game"
             link="https://mithintv.github.io/simon-game/"
           /> */}
