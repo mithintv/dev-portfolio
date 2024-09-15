@@ -1,18 +1,18 @@
 {
-  "short_name": "Mithin Thomas Portfolio",
-  "name": "Software Engineer Portfolio of Mithin Thomas",
+  "short_name": "Mithin Thomas Dev Portfolio",
+  "name": "Mithin Thomas's Developer Portfolio",
   "icons": [{
-      "src": "logo_onblack_reallysmall.jpg",
+      "src": "Logo_onblack_reallysmall.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo_onblack_smaller.jpg",
+      "src": "Logo_onblack_smaller.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo_onblack_smaller.jpg",
+      "src": "Logo_onblack_smaller.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
