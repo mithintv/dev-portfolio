@@ -80,14 +80,16 @@ p.hideError {
 @include devices(tablet) {
   .form {
     margin-top: 2.5rem;
-    width: 85%;
+    padding: 0 4rem;
+    width: 375px;
   }
 }
 
 @include devices(mobile) {
   .form {
     margin-top: 2rem;
-    width: 85%;
+    padding: 0 1rem;
+    width: 300px;
   }
 
   .formHeader {
