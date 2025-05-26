@@ -1,33 +1,21 @@
 import { Spotlight } from "@/components/spotlight";
 import { cn } from "@/lib/utils";
+import type { IProject } from "./i-project";
 import { ProjectHeader } from "./project-header";
 
 export const ProjectCard = (
   {
     className,
-    title,
-    description,
-    img,
-    demoLink,
-    repoLink,
-    tech,
+    project: { title, description, image, demoLink, repoLink, tech },
   }: {
     className?: string;
-    title: string;
-    description: string;
-    img: string;
-    demoLink: string;
-    repoLink: string;
-    tech: string[];
+    project: IProject;
   }
 ) => {
   return (
-    <a
-      className="hover:scale-105 duration-300"
-      aria-label="project link"
-      rel="noreferrer"
-      target="_blank"
-      href={demoLink}
+    <div
+      className="h-[315px] cursor-pointer hover:scale-105 duration-300"
+      onClick={() => window.open(demoLink, "_blank", "noopener,noreferrer")}
     >
       <div
         className={cn(
@@ -38,7 +26,7 @@ export const ProjectCard = (
         <img
           className="[mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_1px,rgba(0,0,0,1)_1px)] w-100 object-cover rounded-t-xl md:rounded-t-none md:rounded-r-xl"
           alt="project"
-          src={img}
+          src={image.fields.file.url}
         />
         <Spotlight className="flex flex-col px-4 py-2 gap-y-2 w-full rounded-b-xl md:rounded-b-none md:rounded-l-xl">
           <ProjectHeader title={title} repoLink={repoLink} />
@@ -57,6 +45,6 @@ export const ProjectCard = (
           </div>
         </Spotlight>
       </div>
-    </a>
+    </div>
   );
 };
