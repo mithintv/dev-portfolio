@@ -19,6 +19,8 @@ export const getProjects = async () => {
   const res = await client.getEntries<IContentfulProject>({
     content_type: "project",
     "fields.active[in]": "true",
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     order: "-fields.order",
   });
   return res.items;
