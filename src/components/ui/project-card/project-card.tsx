@@ -40,7 +40,7 @@ export const ProjectCard = (
           alt="project"
           src={img}
         />
-        <Spotlight className="flex flex-col px-4 py-2 gap-y-2 w-full">
+        <Spotlight className="flex flex-col px-4 py-2 gap-y-2 w-full rounded-b-xl md:rounded-b-none md:rounded-l-xl">
           <ProjectHeader title={title} repoLink={repoLink} />
           <p className="text-sm">{description}</p>
           <div className="flex flex-row flex-wrap gap-2 py-3 text-sm align-end">
