@@ -59,11 +59,11 @@ export const Home = () => {
 
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <img
-              className="w-[350px] md:w-[285px] bg-background"
+              className="w-[350px] md:w-[285px]"
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-b93e3.appspot.com/o/github%2Fgifs%2Foverview.svg?alt=media"
             />
             <img
-              className="w-[350px] md:w-[285px] bg-background"
+              className="w-[350px] md:w-[285px]"
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-b93e3.appspot.com/o/github%2Fgifs%2Flanguages.svg?alt=media"
             />
           </div>
