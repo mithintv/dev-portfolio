@@ -13,7 +13,10 @@ export const ProjectHeader = (
           target="_blank"
           href={repoLink}
         >
-          <Github size={18} className="hover:text-foreground/75" />
+          <Github
+            size={18}
+            className="hover:text-foreground/75 transition-colors"
+          />
         </a>
       </div>
     </div>

@@ -23,7 +23,7 @@ export const ProjectCard = (
 ) => {
   return (
     <a
-      className="hover:-translate-y-0.5 duration-300"
+      className="hover:scale-105 duration-300"
       aria-label="project link"
       rel="noreferrer"
       target="_blank"
@@ -31,7 +31,7 @@ export const ProjectCard = (
     >
       <div
         className={cn(
-          "flex flex-col md:flex-row-reverse text-left bg-background w-full h-full border rounded-xl duration-300 animate-appear hover:-translate-y-2",
+          "flex flex-col md:flex-row-reverse text-left bg-background w-full h-full border rounded-xl",
           className
         )}
       >

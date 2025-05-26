@@ -42,15 +42,15 @@
 
   --text-xxs: 0.70rem;
 
-  --animate-wiggle: appear 0.5s ease;
+  --animate-appear: appear 1s ease;
 
   @keyframes appear {
-    0% {
+    from {
       opacity: 0;
       transform: translateY(3rem);
     }
 
-    100% {
+    to {
       opacity: 1;
       transform: translateY(0);
     }
