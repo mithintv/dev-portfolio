@@ -11,7 +11,7 @@ export const Home = () => {
         <div className="flex flex-col gap-y-4 justify-center">
           <h1 className="text-5xl font-bold px-1">Mithin Thomas</h1>
 
-          <h2 className="px-1 leading-6 text-xl font-semibold">
+          <h2 className="-mt-2 px-1 leading-6 text-xl font-semibold">
             I'm a software engineer with an enthusiasm for compassionate and
             empathetic ideas that can have real impact because I believe...
           </h2>
@@ -59,11 +59,11 @@ export const Home = () => {
 
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <img
-              className="w-[350px] md:w-[285px] bg-background"
+              className="w-[350px] md:w-[285px]"
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-b93e3.appspot.com/o/github%2Fgifs%2Foverview.svg?alt=media"
             />
             <img
-              className="w-[350px] md:w-[285px] bg-background"
+              className="w-[350px] md:w-[285px]"
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-b93e3.appspot.com/o/github%2Fgifs%2Flanguages.svg?alt=media"
             />
           </div>
