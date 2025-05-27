@@ -2,6 +2,7 @@ import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { PostHogProvider } from "posthog-js/react";
 import ReactGA from "react-ga4";
 
 import { Copyright } from "lucide-react";
@@ -25,18 +26,25 @@ const App = () => {
 
   return (
     <StrictMode>
-      <QueryClientProvider client={queryClient}>
-        <Spotlight className="p-0">
-          <main className="flex flex-col items-center">
-            <Home />
-            <Projects />
-            <span className="flex flex-row gap-x-1 py-4 items-center text-xs text-neutral-500 animate-appear">
-              <Copyright size={12} />
-              {new Date().getFullYear()} — Mithin Thomas
-            </span>
-          </main>
-        </Spotlight>
-      </QueryClientProvider>
+      <PostHogProvider
+        apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY}
+        options={{
+          api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+        }}
+      >
+        <QueryClientProvider client={queryClient}>
+          <Spotlight className="p-0">
+            <main className="flex flex-col items-center">
+              <Home />
+              <Projects />
+              <span className="flex flex-row gap-x-1 py-4 items-center text-xs text-neutral-500 animate-appear">
+                <Copyright size={12} />
+                {new Date().getFullYear()} — Mithin Thomas
+              </span>
+            </main>
+          </Spotlight>
+        </QueryClientProvider>
+      </PostHogProvider>
     </StrictMode>
   );
 };
