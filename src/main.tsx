@@ -6,8 +6,8 @@ import { PostHogProvider } from "posthog-js/react";
 import ReactGA from "react-ga4";
 
 import { Copyright } from "lucide-react";
-import { Home } from "./components/pages/home";
-import { Projects } from "./components/pages/projects";
+import { Home } from "./components/pages/home/home";
+import { Projects } from "./components/pages/projects/projects";
 import { Spotlight } from "./components/spotlight";
 import "./index.css";
 

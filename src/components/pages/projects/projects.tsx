@@ -1,7 +1,7 @@
 import { getProjects } from "@/services/contentful";
 import { useQuery } from "@tanstack/react-query";
-import { Header } from "../ui/header";
-import { ProjectCard } from "../ui/project-card/project-card";
+import { Header } from "../../ui/header";
+import { ProjectCard } from "./project-card/project-card";
 
 export const Projects = () => {
   const { data: projects } = useQuery({
