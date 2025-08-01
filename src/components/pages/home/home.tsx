@@ -1,7 +1,19 @@
-import { FolderOpen, Github, Linkedin, Mail } from "lucide-react";
-import { Link } from "../ui/link";
+import { getSocials } from "@/services/contentful";
+import { useQuery } from "@tanstack/react-query";
+import { FolderOpen, Mail } from "lucide-react";
+
+import { Link } from "../../ui/link";
+import { SocialLink } from "./social-link/social-link";
 
 export const Home = () => {
+  const { data: socials } = useQuery({
+    queryKey: ["socials"],
+    queryFn: getSocials,
+    refetchOnWindowFocus: false,
+    retry: false,
+    staleTime: 1000 * 60 * 60, // 1 hour
+  });
+
   return (
     <>
       <section
@@ -33,15 +45,12 @@ export const Home = () => {
           </blockquote>
 
           <div className="flex flex-row gap-4 px-1">
-            <Link
-              href="https://www.linkedin.com/in/mithin-thomas/"
-              tooltip="LinkedIn"
-            >
-              <Linkedin />
-            </Link>
-            <Link href="https://www.github.com/mithintv/" tooltip="GitHub">
-              <Github />
-            </Link>
+            {socials &&
+              socials.map((social) => {
+                return (
+                  <SocialLink key={social.sys.id} social={social.fields} />
+                );
+              })}
             <Link href="#projects" target="_self" tooltip="Projects">
               <FolderOpen />
             </Link>
