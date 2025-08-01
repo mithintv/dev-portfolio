@@ -1,7 +1,32 @@
 import { Spotlight } from "@/components/spotlight";
 import { cn } from "@/lib/utils";
-import type { IProject } from "./i-project";
 import { ProjectHeader } from "./project-header";
+
+export interface IProject {
+  title: string;
+  description: string;
+  demoLink: string;
+  repoLink: string;
+  tech: string[];
+  image: {
+    fields: {
+      title: string;
+      description: string;
+      file: {
+        contentType: string;
+        fileName: string;
+        url: string;
+        details: {
+          size: number;
+          image: {
+            width: number;
+            height: number;
+          };
+        };
+      };
+    };
+  };
+}
 
 export const ProjectCard = (
   {
